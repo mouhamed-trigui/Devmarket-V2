@@ -1,0 +1,13 @@
+{
+  "appId": "io.ionic.starter",
+  "appName": "defmarket-backoffice",
+  "bundledWebRuntime": false,
+  "npmClient": "yarn",
+  "webDir": "../../dist/apps/defmarket-backoffice",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "cordova": {}
+}

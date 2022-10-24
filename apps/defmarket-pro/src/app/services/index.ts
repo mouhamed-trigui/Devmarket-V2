@@ -1,0 +1,70 @@
+import {
+    signIn,
+    me,
+    signUp,
+    signUpI0,
+    signUpI1,
+    signUpI2,
+    forgotPassword,
+    checkEmail,
+    findBySiren,
+    addCompany,
+    deleteCompany,
+    listCompany,
+    updateCompany,
+    ModHeader,
+    moreInfo,addOffer,deleteOffer,getAlloffersOfStore,getOfferResource,getOffre,updateOfferImage,updateOffre
+} from './methodes';
+import {
+    companyProps,
+    errorProps,
+    offerProps,
+    signUpI0Props,
+    signUpI1Props,
+    signUpI2Props,
+    signUpR0Props,
+    IValueProps
+} from './model';
+
+export {
+    signIn,
+    me,
+    signUp,
+    signUpI0,
+    signUpI1,
+    signUpI2,
+    forgotPassword,
+    checkEmail,
+    findBySiren,
+    addCompany,
+    deleteCompany,
+    listCompany,
+    updateCompany,
+    ModHeader,
+    moreInfo,addOffer,deleteOffer,getAlloffersOfStore,getOfferResource,getOffre,updateOfferImage,updateOffre,
+    companyProps,
+    errorProps,
+    offerProps,
+    signUpI0Props,
+    signUpI1Props,
+    signUpI2Props,
+    signUpR0Props,
+    IValueProps
+};
+export default {
+    signIn,
+    me,
+    signUp,
+    signUpI0,
+    signUpI1,
+    signUpI2,
+    forgotPassword,
+    checkEmail,
+    findBySiren,
+    addCompany,
+    deleteCompany,
+    listCompany,
+    updateCompany,
+    ModHeader,
+    moreInfo,addOffer,deleteOffer,getAlloffersOfStore,getOfferResource,getOffre,updateOfferImage,updateOffre
+};

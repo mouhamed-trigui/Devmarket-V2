@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+  <g id="beneficiaire-c" transform="translate(5.997 8)">
+    <rect id="Rectangle_275" data-name="Rectangle 275" width="36" height="36" rx="4" transform="translate(-5.997 -8)" fill="#b60c1f" opacity="0.08"/>
+    <path id="Tracé_3776" data-name="Tracé 3776" d="M210.452,258.732l.83-.83-1.88-1.05Zm0,0" transform="translate(-200.385 -245.79)" fill="#ff8a00"/>
+    <g id="clients" transform="translate(1.003 -33.631)">
+      <circle id="Ellipse_53" data-name="Ellipse 53" cx="3.5" cy="3.5" r="3.5" transform="translate(7 34.631)" fill="#b60c1f"/>
+      <circle id="Ellipse_54" data-name="Ellipse 54" cx="2" cy="2" r="2" transform="translate(15.977 37.796)" fill="#b60c1f"/>
+      <circle id="Ellipse_55" data-name="Ellipse 55" cx="2" cy="2" r="2" transform="translate(1 37.796)" fill="#b60c1f"/>
+      <path id="Tracé_133434" data-name="Tracé 133434" d="M5.772,241.195a3.825,3.825,0,0,0-2.851-.662A2.915,2.915,0,0,0,0,243.436v4.7a1.264,1.264,0,0,0,1.265,1.26c3.012,0,2.649.054,2.649-.13C3.914,245.935,3.52,243.494,5.772,241.195Z" transform="translate(0 -198.171)" fill="#b60c1f"/>
+      <path id="Tracé_133435" data-name="Tracé 133435" d="M127.037,239.9a6.364,6.364,0,0,0-4.916,1.166c-2.355,1.89-1.9,4.435-1.9,7.548a1.507,1.507,0,0,0,1.5,1.506c9.061,0,9.422.293,9.959-.9.176-.4.128-.275.128-4.132A5.21,5.21,0,0,0,127.037,239.9Z" transform="translate(-115.185 -197.522)" fill="#b60c1f"/>
+      <path id="Tracé_133436" data-name="Tracé 133436" d="M380.661,240.534a3.823,3.823,0,0,0-2.851.662c2.235,2.282,1.858,4.557,1.858,8.069,0,.186-.3.13,2.6.13a1.309,1.309,0,0,0,1.31-1.305v-4.653A2.915,2.915,0,0,0,380.661,240.534Z" transform="translate(-361.582 -198.172)" fill="#b60c1f"/>
+    </g>
+  </g>
+</svg>

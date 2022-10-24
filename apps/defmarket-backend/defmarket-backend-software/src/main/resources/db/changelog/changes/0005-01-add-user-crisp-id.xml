@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
+    <changeSet id="1657622680400-50"
+               author="Miladi (generated)">
+        <addColumn schemaName="defmarket"
+                   tableName="user_account">
+            <column name="crisp_id"
+                    type="VARCHAR(50)"/>
+        </addColumn>
+        <addColumn schemaName="defmarket" tableName="user_account_aud">
+            <column name="crisp_id"
+                    type="VARCHAR(50)"/>
+        </addColumn>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="66" height="66" viewBox="0 0 66 66">
+  <defs>
+    <filter id="cercle" x="0" y="0" width="66" height="66" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-color="#9e9e9d" flood-opacity="0.302"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="plus" transform="translate(23 20.224)">
+    <g transform="matrix(1, 0, 0, 1, -23, -20.22)" filter="url(#cercle)">
+      <path id="cercle-2" data-name="cercle" d="M24,0A24,24,0,1,1,0,24,24,24,0,0,1,24,0Z" transform="translate(9 6)" fill="#eaae00"/>
+    </g>
+    <path id="Tracé_13859" data-name="Tracé 13859" d="M18.242,8.242H11.758V1.758a1.758,1.758,0,1,0-3.516,0V8.242H1.758a1.758,1.758,0,1,0,0,3.516H8.242v6.484a1.758,1.758,0,1,0,3.516,0V11.758h6.484a1.758,1.758,0,1,0,0-3.516Z" fill="#fff"/>
+  </g>
+</svg>

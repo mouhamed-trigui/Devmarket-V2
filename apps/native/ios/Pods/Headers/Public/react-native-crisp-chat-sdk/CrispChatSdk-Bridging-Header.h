@@ -1,0 +1,1 @@
+../../../../../node_modules/react-native-crisp-chat-sdk/ios/CrispChatSdk-Bridging-Header.h

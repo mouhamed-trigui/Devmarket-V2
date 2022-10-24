@@ -1,0 +1,118 @@
+{
+  "BACK_TO_SCHOOL": {
+    "defaultMessage": "Rentrée des classes",
+    "description": "Rentrée des classes"
+  },
+  "BLACK_FRIDAY": {
+    "defaultMessage": "Black Friday",
+    "description": "Black Friday"
+  },
+  "E_COMMERCE_O": {
+    "defaultMessage": "Offre e-commerce",
+    "description": "Offre e-commerce"
+  },
+  "E_COMMERCE_S": {
+    "defaultMessage": "Structure E-Commerce",
+    "description": "Structure E-Commerce"
+  },
+  "FATHER_PARTY": {
+    "defaultMessage": "Fête des pères",
+    "description": "Fête des pères"
+  },
+  "FLAT": {
+    "defaultMessage": "Réduction Fixe",
+    "description": "Réduction Fixe"
+  },
+  "GOOD_PLAN": {
+    "defaultMessage": "Bon Plan",
+    "description": "Bon Plan"
+  },
+  "HALLOWEEN": {
+    "defaultMessage": "Halloween",
+    "description": "Halloween"
+  },
+  "LIQUIDATION": {
+    "defaultMessage": "Liquidation",
+    "description": "Liquidation"
+  },
+  "MOTHER_PARTY": {
+    "defaultMessage": "Fête des mères",
+    "description": "Fête des mères"
+  },
+  "NATIONAL_PARTY": {
+    "defaultMessage": "Saint Patrick",
+    "description": "Saint Patrick"
+  },
+  "NOEL": {
+    "defaultMessage": "Noël",
+    "description": "Noël"
+  },
+  "NO_THEME": {
+    "defaultMessage": "Aucun thème",
+    "description": "Aucun thème"
+  },
+  "OTHER": {
+    "defaultMessage": "Autres (Centre commerciale, marque...)",
+    "description": "Autres (Centre commerciale, marque...)"
+  },
+  "PAQUES": {
+    "defaultMessage": "Paques",
+    "description": "Paques"
+  },
+  "PERCENTAGE": {
+    "defaultMessage": "Pourcentage",
+    "description": "Pourcentage"
+  },
+  "PHYSICAL_O": {
+    "defaultMessage": "Offre physique",
+    "description": "Offre physique"
+  },
+  "PHYSICAL_S": {
+    "defaultMessage": "Structure Physique",
+    "description": "Structure Physique"
+  },
+  "PRIVATE_PERSON": {
+    "defaultMessage": "Societé",
+    "description": "Societé"
+  },
+  "PROFESSIONAL": {
+    "defaultMessage": "Entreprise individuelle",
+    "description": "Entreprise individuelle"
+  },
+  "PROMO_FALSH": {
+    "defaultMessage": "Promo Flash",
+    "description": "Promo Flash"
+  },
+  "SAINT_PATRICK": {
+    "defaultMessage": "Fête Nationale",
+    "description": "Fête Nationale"
+  },
+  "SAINT_VALENTIN": {
+    "defaultMessage": "Saint Valentin",
+    "description": "Saint Valentin"
+  },
+  "TOUSSAINT": {
+    "defaultMessage": "Toussaint",
+    "description": "Toussaint"
+  },
+  "UNDEFINED": {
+    "defaultMessage": "-",
+    "description": "-"
+  },
+  "W82/g+": {
+    "defaultMessage": "Erreur",
+    "description": "Erreur"
+  },
+  "YEARS_DAY": {
+    "defaultMessage": "Jour de l'an",
+    "description": "Jour de l'an"
+  },
+  "rGFUZx": {
+    "defaultMessage": "Une erreur s'est produite : {error}",
+    "description": "Message d'erreur"
+  },
+  "wZqAHg": {
+    "defaultMessage": "Réessayer",
+    "description": "Réessayer"
+  }
+}

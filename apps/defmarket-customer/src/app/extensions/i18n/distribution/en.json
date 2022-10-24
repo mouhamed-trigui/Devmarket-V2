@@ -1,0 +1,7 @@
+{
+    "homeScreen": "Home Screen",
+    "tabs": {
+        "home": "Home",
+        "settings": "Settings"
+    } 
+}

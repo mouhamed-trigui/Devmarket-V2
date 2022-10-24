@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd">
+
+    <changeSet id="1662549942265-1" author="Houssem Triki">
+        <renameColumn schemaName="defmarket" tableName="offer" oldColumnName="value" newColumnName="offer_value"/>
+        <renameColumn schemaName="defmarket" tableName="social_media" oldColumnName="value"
+                      newColumnName="social_media_value"/>
+        <renameColumn schemaName="defmarket" tableName="timetable" oldColumnName="day" newColumnName="day_of_week"/>
+    </changeSet>
+    <changeSet id="1662549942265-2" author="Houssem Triki">
+        <renameColumn schemaName="defmarket" tableName="offer_aud" oldColumnName="value" newColumnName="offer_value"/>
+        <renameColumn schemaName="defmarket" tableName="social_media_aud" oldColumnName="value"
+                      newColumnName="social_media_value"/>
+        <renameColumn schemaName="defmarket" tableName="timetable_aud" oldColumnName="day" newColumnName="day_of_week"/>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,6 @@
+module Pods_DefmarketPro {
+  umbrella header "Pods-DefmarketPro-umbrella.h"
+
+  export *
+  module * { export * }
+}

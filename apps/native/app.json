@@ -1,0 +1,113 @@
+{
+    "expo": {
+      "scheme": "defmarket-pro",
+      "name": "Defmarket PRO",
+      "slug": "defmarket-pro",
+      "version": "0.1.0",
+      
+      "packagerOpts": {
+        "config": "metro.config.js",
+        "sourceExts": [
+          "expo.ts",
+          "expo.tsx",
+          "expo.js",
+          "expo.jsx",
+          "ts",
+          "tsx",
+          "js",
+          "jsx",
+          "json",
+          "wasm",
+          "svg"
+        ]
+      },
+      
+      "owner": "abdel-defmarket",
+      "orientation": "portrait",
+      "icon": "./assets/icon-defmarket-pro.png",
+      "splash": {
+        "image": "./assets/splash-defmarket-pro.png",
+        "resizeMode": "cover",
+        "backgroundColor": "#ffffff"
+        
+      },
+      "updates": {
+        "fallbackToCacheTimeout": 0
+      },
+      "assetBundlePatterns": [
+        "**/*"
+      ],
+      "android": {
+        "package": "fr.helios.defmarket.pro",
+        "versionCode": 7,
+        "googleServicesFile": "./google-services.json",
+        "config": {
+          "googleMaps": {
+            "apiKey": "AIzaSyAUKz7XchfHVlTkpWnkR5CHShH016KPOJE"
+          }
+        },
+        "splash":{
+          "image": "./assets/splash-defmarket-pro.png",
+          "resizeMode": "cover",
+          "backgroundColor": "#ffffff"
+        },
+        "permissions": [
+          "READ_EXTERNAL_STORAGE",
+          "WRITE_EXTERNAL_STORAGE",
+          "INTERNET",
+          "USE_FINGERPRINT",
+          "USE_BIOMETRIC",
+          "CAMERA"
+        ]
+      },
+      "ios": {
+        "requireFullScreen": true,
+        "bundleIdentifier": "fr.helios.defmarket.pro",
+        "buildNumber": "15",
+        "supportsTablet": true,
+        "config": {
+          "googleMapsApiKey": "AIzaSyAUKz7XchfHVlTkpWnkR5CHShH016KPOJE"
+        },
+        "infoPlist": {
+            "NSFaceIDUsageDescription": "Autorisez l'application $(PRODUCT_NAME) à utiliser votre Face ID / Touch ID afin de vous authentifier plus rapidement.",
+            "NSCameraUsageDescription": "Autorisez l'application $(PRODUCT_NAME) à utiliser votre caméra.",
+            "NSPhotoLibraryAddUsageDescription": "Autorisez l'application $(PRODUCT_NAME) à accéder à vos photos."
+        },
+        "splash":{
+          "image": "./assets/splash-defmarket-pro.png",
+          "resizeMode": "cover",
+          "backgroundColor": "#ffffff",
+          "tabletImage": "./assets/splash-defmarket-pro-tablette.png"
+        },
+        "usesIcloudStorage": true
+      },
+      "web": {
+        "favicon": "./assets/favicon.png"
+      },
+      "description": "",
+      "userInterfaceStyle": "automatic",
+      "plugins": [
+        [
+          "expo-document-picker",
+          {
+            "appleTeamId": "6VGZN49V54"
+          }
+        ],
+        [
+          "expo-image-picker",
+          {
+            "photosPermission": "Autorisez $(PRODUCT_NAME) à accéder à vos photos."
+          }
+        ],
+        [
+          "expo-media-library",
+          {
+            "photosPermission": "Autorisez $(PRODUCT_NAME) à accéder à vos photos.",
+            "savePhotosPermission": "Autorisez $(PRODUCT_NAME) afin de sauvegarder les fichiers (photos / pièces jointes).",
+            "isAccessMediaLocationEnabled": "true"
+          }
+        ],
+        ["react-native-email-link"]
+      ]
+    }
+  }  

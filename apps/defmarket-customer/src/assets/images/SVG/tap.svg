@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60" height="71" viewBox="0 0 60 71">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="Tracé_134226" data-name="Tracé 134226" d="M68-42A30,30,0,0,1,38-12,30,30,0,0,1,8-42,30,30,0,0,1,38-72,30,30,0,0,1,68-42Z" fill="none" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <path id="Tracé_134225" data-name="Tracé 134225" d="M-281,28H94V-784H-281Z" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-3">
+      <path id="Tracé_134230" data-name="Tracé 134230" d="M62-42A24,24,0,0,1,38-18,24,24,0,0,1,14-42,24,24,0,0,1,38-66,24,24,0,0,1,62-42Z" fill="none" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="clip-path-5">
+      <path id="Tracé_134233" data-name="Tracé 134233" d="M30.056-44.182A6.859,6.859,0,0,1,36.955-51a6.859,6.859,0,0,1,6.9,6.818,6.715,6.715,0,0,1-2.3,5.089v-3.952a4.573,4.573,0,0,0-4.6-4.545,4.573,4.573,0,0,0-4.6,4.545v3.952A6.712,6.712,0,0,1,30.056-44.182ZM49.651-1H38.692a7.147,7.147,0,0,1-6.41-3.917,1.135,1.135,0,0,0-.158-.227l-9.474-10.9a2.619,2.619,0,0,1,.082-3.542,2.7,2.7,0,0,1,3.574-.277l6.05,4.615h.232a2.079,2.079,0,0,0,.83.749c.5.5,1.238,1.628,1.238,1V-43.046a2.286,2.286,0,0,1,2.3-2.273,2.286,2.286,0,0,1,2.3,2.273v19.318a1.144,1.144,0,0,0,1.15,1.137,1.143,1.143,0,0,0,1.15-1.137v-5.682a2.287,2.287,0,0,1,2.3-2.273,2.287,2.287,0,0,1,2.3,2.273v5.682a1.143,1.143,0,0,0,1.15,1.137,1.143,1.143,0,0,0,1.149-1.137v-3.409a2.287,2.287,0,0,1,2.3-2.273,2.287,2.287,0,0,1,2.3,2.273v3.409a1.143,1.143,0,0,0,1.15,1.137,1.143,1.143,0,0,0,1.15-1.137v-1.136a2.286,2.286,0,0,1,2.3-2.273,2.286,2.286,0,0,1,2.3,2.273v12.5a1.072,1.072,0,0,0,.046.227v.909A10.3,10.3,0,0,1,49.651-1Z" fill="none" clip-rule="evenodd"/>
+    </clipPath>
+  </defs>
+  <g id="tap" transform="translate(-8 72)">
+    <g id="Groupe_38227" data-name="Groupe 38227" clip-path="url(#clip-path)">
+      <g id="Groupe_38226" data-name="Groupe 38226" clip-path="url(#clip-path-2)">
+        <path id="Tracé_134224" data-name="Tracé 134224" d="M7-73H69v62H7Z" fill="#e8e8e8"/>
+      </g>
+    </g>
+    <g id="Groupe_38232" data-name="Groupe 38232" clip-path="url(#clip-path-3)">
+      <g id="Groupe_38231" data-name="Groupe 38231" clip-path="url(#clip-path-2)">
+        <path id="Tracé_134228" data-name="Tracé 134228" d="M13-67H63v50H13Z" fill="#e3e3e3"/>
+      </g>
+    </g>
+    <g id="Groupe_38234" data-name="Groupe 38234" clip-path="url(#clip-path-5)">
+      <g id="Groupe_38233" data-name="Groupe 38233" clip-path="url(#clip-path-2)">
+        <path id="Tracé_134231" data-name="Tracé 134231" d="M20.753-52H61V0H20.753Z" fill="#00aac6"/>
+      </g>
+    </g>
+  </g>
+</svg>

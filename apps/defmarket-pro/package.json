@@ -1,0 +1,19 @@
+{
+  "main": "./index.js",
+  "private": true,
+  "version": "0.0.1",
+  "dependencies": {
+    "@react-native-community/masked-view": "*",
+    "@react-native-masked-view/masked-view": "*",
+    "@react-navigation/native": "*",
+    "@react-navigation/native-stack": "*",
+    "react-native": "*",
+    "react-native-email-link": "*",
+    "react-native-svg": "*",
+    "expo-sdk":"*"
+  },
+  "devDependencies": {
+    "@types/react-native-vector-icons": "^6.4.9",
+    "@types/styled-components": "^5.1.15"
+  }
+}

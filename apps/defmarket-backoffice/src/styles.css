@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: 'DefmarketFontPrimary';
+    font-style: normal;
+    font-weight: normal;
+    src: url('./assets/fonts/Miter/Mitr-Light.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('./assets/fonts/Roboto/Roboto-Regular.ttf');
+}
+
+:root[mode='ios'] .muli,
+:root[mode='md'] .muli {
+    --ion-font-family: 'Roboto' !important;
+    font-family: 'Roboto' !important;
+}
+
+html.md {
+    --ion-default-font: 'Roboto' !important;
+}
+.css-1auycx3-MuiAutocomplete-root .MuiFilledInput-root{
+    padding-top: 0px !important;
+    padding-left: 0px !important
+}
+#AutoSearchInput-label{
+    visibility: hidden;
+}

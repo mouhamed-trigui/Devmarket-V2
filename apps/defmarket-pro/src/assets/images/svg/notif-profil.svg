@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+  <g id="notif-profil" transform="translate(-24 -357)">
+    <rect id="Rectangle_275" data-name="Rectangle 275" width="36" height="36" rx="4" transform="translate(24 357)" fill="#fbb002" opacity="0.08"/>
+    <g id="user" transform="translate(31 364)">
+      <path id="Tracé_2161" data-name="Tracé 2161" d="M11.443,13.775A5.8,5.8,0,0,0,14.9,14.907a6.054,6.054,0,0,0,5.9-5.953,5.9,5.9,0,1,0-9.351,4.822Z" transform="translate(-3.897 -3)" fill="#feb103"/>
+      <path id="Tracé_2162" data-name="Tracé 2162" d="M19.212,16.55a7.561,7.561,0,0,1-10.425,0A11.081,11.081,0,0,0,3,26.288a.851.851,0,0,0,.846.85H24.154a.851.851,0,0,0,.846-.85A11.081,11.081,0,0,0,19.212,16.55Z" transform="translate(-3 -5.138)" fill="#feb103"/>
+    </g>
+  </g>
+</svg>

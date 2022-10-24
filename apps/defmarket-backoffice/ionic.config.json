@@ -1,0 +1,7 @@
+{
+  "name": "defmarket-backoffice",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}

@@ -1,0 +1,1552 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd"
+    objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+    <changeSet id="1654177055564-1" author="Amine">
+        <sql splitStatements="false">
+            CREATE SCHEMA IF NOT EXISTS defmarket
+        </sql>
+    </changeSet>
+    <changeSet id="1654177055565-1" author="Miladi (generated)">
+        <createTable schemaName="defmarket" tableName="documents">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="documents_pkey"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)"/>
+            <column name="created_date" type="timestamp"/>
+            <column name="last_modified_by" type="VARCHAR(255)"/>
+            <column name="last_modified_date" type="timestamp"/>
+            <column name="version" type="BIGINT"/>
+            <column name="name" type="VARCHAR(255)"/>
+            <column name="path" type="CLOB">
+                <constraints nullable="false"/>
+            </column>
+            <column name="size" type="BIGINT"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1654177055565-3" author="Miladi (generated)">
+        <createTable schemaName="defmarket" tableName="permission">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="permission_pkey"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)"/>
+            <column name="created_date" type="timestamp"/>
+            <column name="last_modified_by" type="VARCHAR(255)"/>
+            <column name="last_modified_date" type="timestamp"/>
+            <column name="version" type="BIGINT"/>
+            <column name="description" type="VARCHAR(255)"/>
+            <column name="name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet id="1654177055565-4" author="Miladi (generated)">
+        <createTable schemaName="defmarket" tableName="user_account">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="user_account_pkey"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)"/>
+            <column name="created_date" type="timestamp"/>
+            <column name="last_modified_by" type="VARCHAR(255)"/>
+            <column name="last_modified_date" type="timestamp"/>
+            <column name="version" type="BIGINT"/>
+            <column name="activity" type="VARCHAR(10)"/>
+            <column name="city" type="VARCHAR(200)"/>
+            <column name="country" type="VARCHAR(100)"/>
+            <column name="department" type="VARCHAR(100)"/>
+            <column name="street" type="VARCHAR(500)"/>
+            <column name="zip_code" type="VARCHAR(10)"/>
+            <column name="birth_city" type="VARCHAR(255)"/>
+            <column name="birthday" type="VARCHAR(255)"/>
+            <column name="is_blocked" type="BOOLEAN"/>
+            <column name="is_communication" type="BOOLEAN"/>
+            <column name="is_company_completed" type="BOOLEAN"/>
+            <column name="is_identity_validated" type="BOOLEAN"/>
+            <column name="is_offer_completed" type="BOOLEAN"/>
+            <column name="is_profile_completed" type="BOOLEAN"/>
+            <column name="is_store_completed" type="BOOLEAN"/>
+            <column name="is_store_validated" type="BOOLEAN"/>
+            <column name="delete_request_date" type="timestamp"/>
+            <column name="is_deleted" type="BOOLEAN"/>
+            <column name="email" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="is_expired" type="BOOLEAN"/>
+            <column name="first_name" type="VARCHAR(255)"/>
+            <column name="gender" type="VARCHAR(10)"/>
+            <column name="know_us_through" type="VARCHAR(20)"/>
+            <column name="know_us_through_other_value" type="VARCHAR(255)"/>
+            <column name="last_name" type="VARCHAR(255)"/>
+            <column name="mail_validated" type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
+            <column name="more_info_requested_by_admin" type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
+            <column name="new_email" type="VARCHAR(255)"/>
+            <column name="password" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="push_notification_active" type="BOOLEAN"/>
+            <column name="user_type" type="VARCHAR(10)"/>
+            <column name="validated_by_admin" type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
+            <column name="validated_info_by_admin" type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
+            <column name="is_veteran" type="BOOLEAN"/>
+            <column name="avatar_document_id" type="BIGINT"/>
+            <column name="job_id" type="BIGINT"/>
+            <column name="justification_identity_document_id" type="BIGINT"/>
+            <column name="justification_veteran_document_id" type="BIGINT"/>
+            <column name="phone_id" type="BIGINT"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1654177055565-5" author="Miladi (generated)">
+        <createTable schemaName="defmarket" tableName="store">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="store_pkey"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)"/>
+            <column name="created_date" type="timestamp"/>
+            <column name="last_modified_by" type="VARCHAR(255)"/>
+            <column name="last_modified_date" type="timestamp"/>
+            <column name="version" type="BIGINT"/>
+            <column name="city" type="VARCHAR(200)"/>
+            <column name="country" type="VARCHAR(100)"/>
+            <column name="department" type="VARCHAR(100)"/>
+            <column name="street" type="VARCHAR(500)"/>
+            <column name="zip_code" type="VARCHAR(10)"/>
+            <column name="is_blocked" type="BOOLEAN"/>
+            <column name="is_deleted" type="BOOLEAN"/>
+            <column name="description" type="VARCHAR(999)"/>
+            <column name="is_e_commerce_and_physical_store" type="BOOLEAN"/>
+            <column name="email" type="VARCHAR(255)"/>
+            <column name="geolocation" type="PUBLIC.GEOGRAPHY"/>
+            <column name="hide_my_contacts" type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
+            <column name="moderation" type="JSONB"/>
+            <column name="name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="is_practice_offer_beforedm" type="BOOLEAN"/>
+            <column name="practice_offer_beforedmtext" type="VARCHAR(255)"/>
+            <column name="targeted_jobs_beforedm" type="VARCHAR(255)"/>
+            <column name="store_type" type="VARCHAR(20)"/>
+            <column name="closure_type" type="VARCHAR(255)"/>
+            <column name="reason" type="VARCHAR(255)"/>
+            <column name="validated_by_admin" type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
+            <column name="is_visible" type="BOOLEAN"/>
+            <column name="website_is_public" type="BOOLEAN"/>
+            <column name="website_url" type="VARCHAR(255)"/>
+            <column name="company_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="cover_document_id" type="BIGINT"/>
+            <column name="logo_document_id" type="BIGINT"/>
+            <column name="store_category_id" type="BIGINT"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1654177055565-6" author="Miladi (generated)">
+        <createTable schemaName="defmarket" tableName="store_aud">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="store_aud_pkey"/>
+            </column>
+            <column name="rev" type="INT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="store_aud_pkey"/>
+            </column>
+            <column name="revtype" type="SMALLINT(5)"/>
+            <column name="revend" type="INT"/>
+            <column name="city" type="VARCHAR(200)"/>
+            <column name="country" type="VARCHAR(100)"/>
+            <column name="department" type="VARCHAR(100)"/>
+            <column name="street" type="VARCHAR(500)"/>
+            <column name="zip_code" type="VARCHAR(10)"/>
+            <column name="is_blocked" type="BOOLEAN"/>
+            <column name="is_deleted" type="BOOLEAN"/>
+            <column name="description" type="VARCHAR(999)"/>
+            <column name="is_e_commerce_and_physical_store" type="BOOLEAN"/>
+            <column name="email" type="VARCHAR(255)"/>
+            <column name="geolocation" type="PUBLIC.GEOGRAPHY"/>
+            <column name="hide_my_contacts" type="BOOLEAN"/>
+            <column name="moderation" type="JSONB"/>
+            <column name="name" type="VARCHAR(255)"/>
+            <column name="is_practice_offer_beforedm" type="BOOLEAN"/>
+            <column name="practice_offer_beforedmtext" type="VARCHAR(255)"/>
+            <column name="targeted_jobs_beforedm" type="VARCHAR(255)"/>
+            <column name="store_type" type="VARCHAR(20)"/>
+            <column name="closure_type" type="VARCHAR(255)"/>
+            <column name="reason" type="VARCHAR(255)"/>
+            <column name="validated_by_admin" type="BOOLEAN"/>
+            <column name="is_visible" type="BOOLEAN"/>
+            <column name="website_is_public" type="BOOLEAN"/>
+            <column name="website_url" type="VARCHAR(255)"/>
+            <column name="company_id" type="BIGINT"/>
+            <column name="cover_document_id" type="BIGINT"/>
+            <column name="logo_document_id" type="BIGINT"/>
+            <column name="store_category_id" type="BIGINT"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1654177055565-7" author="Miladi (generated)">
+        <addUniqueConstraint schemaName="defmarket" columnNames="name" constraintName="UK_PERMISSION_NAME"
+                             tableName="permission"/>
+    </changeSet>
+    <changeSet id="1654177055565-8" author="Miladi (generated)">
+        <addUniqueConstraint schemaName="defmarket" columnNames="email" constraintName="UK_USER_ACCOUNT_EMAIL"
+                             tableName="user_account"/>
+    </changeSet>
+    <changeSet id="1654177055565-9" author="Miladi (generated)">
+        <createSequence schemaName="defmarket" cacheSize="1" cycle="false" dataType="bigint" incrementBy="10"
+                        maxValue="9223372036854775807"
+                        minValue="1" sequenceName="announcement_seq" startValue="1"/>
+    </changeSet>
+    <changeSet id="1654177055565-10" author="Miladi (generated)">
+        <createSequence schemaName="defmarket" cacheSize="1" cycle="false" dataType="bigint" incrementBy="10"
+                        maxValue="9223372036854775807"
+                        minValue="1" sequenceName="company_seq" startValue="1"/>
+    </changeSet>
+    <changeSet id="1654177055565-11" author="Miladi (generated)">
+        <createSequence schemaName="defmarket" cacheSize="1" cycle="false" dataType="bigint" incrementBy="10"
+                        maxValue="9223372036854775807"
+                        minValue="1" sequenceName="expo_token_seq" startValue="1"/>
+    </changeSet>
+    <changeSet id="1654177055565-12" author="Miladi (generated)">
+        <createSequence schemaName="defmarket" cacheSize="1" cycle="false" dataType="bigint" incrementBy="1"
+                        maxValue="9223372036854775807"
+                        minValue="1" sequenceName="hibernate_sequence" startValue="1"/>
+    </changeSet>
+    <changeSet id="1654177055565-13" author="Miladi (generated)">
+        <createSequence schemaName="defmarket" cacheSize="1" cycle="false" dataType="bigint" incrementBy="10"
+                        maxValue="9223372036854775807"
+                        minValue="1" sequenceName="history_trace_seq" startValue="1"/>
+    </changeSet>
+    <changeSet id="1654177055565-14" author="Miladi (generated)">
+        <createSequence schemaName="defmarket" cacheSize="1" cycle="false" dataType="bigint" incrementBy="10"
+                        maxValue="9223372036854775807"
+                        minValue="1" sequenceName="job_sec" startValue="1"/>
+    </changeSet>
+    <changeSet id="1654177055565-15" author="Miladi (generated)">
+        <createSequence schemaName="defmarket" cacheSize="1" cycle="false" dataType="bigint" incrementBy="10"
+                        maxValue="9223372036854775807"
+                        minValue="1" sequenceName="notification_seq" startValue="1"/>
+    </changeSet>
+    <changeSet id="1654177055565-16" author="Miladi (generated)">
+        <createSequence schemaName="defmarket" cacheSize="1" cycle="false" dataType="bigint" incrementBy="10"
+                        maxValue="9223372036854775807"
+                        minValue="1" sequenceName="offer_seq" startValue="1"/>
+    </changeSet>
+    <changeSet id="1654177055565-17" author="Miladi (generated)">
+        <createSequence schemaName="defmarket" cacheSize="1" cycle="false" dataType="bigint" incrementBy="10"
+                        maxValue="9223372036854775807"
+                        minValue="1" sequenceName="permission_seq" startValue="1"/>
+    </changeSet>
+    <changeSet id="1654177055565-18" author="Miladi (generated)">
+        <createSequence schemaName="defmarket" cacheSize="1" cycle="false" dataType="bigint" incrementBy="10"
+                        maxValue="9223372036854775807"
+                        minValue="1" sequenceName="phone_seq" startValue="1"/>
+    </changeSet>
+    <changeSet id="1654180633253-22" author="Miladi (generated)">
+        <createSequence incrementBy="10" schemaName="defmarket" sequenceName="default_role_seq" startValue="10"/>
+    </changeSet>
+    <changeSet id="1654180633233-22" author="Miladi (generated)">
+        <createSequence incrementBy="10" schemaName="defmarket" sequenceName="document_seq" startValue="20"/>
+    </changeSet>
+    <changeSet id="1654180633253-23" author="Miladi (generated)">
+        <createSequence incrementBy="10" schemaName="defmarket" sequenceName="user_role_seq" startValue="3"/>
+    </changeSet>
+    <changeSet id="1654177055565-20" author="Miladi (generated)">
+        <createSequence schemaName="defmarket" cacheSize="1" cycle="false" dataType="bigint" incrementBy="10"
+                        maxValue="9223372036854775807"
+                        minValue="1" sequenceName="ruler_seq" startValue="1"/>
+    </changeSet>
+    <changeSet id="1654177055565-21" author="Miladi (generated)">
+        <createSequence schemaName="defmarket" cacheSize="1" cycle="false" dataType="bigint" incrementBy="10"
+                        maxValue="9223372036854775807"
+                        minValue="1" sequenceName="social_media_seq" startValue="1"/>
+    </changeSet>
+    <changeSet id="1654177055565-22" author="Miladi (generated)">
+        <createSequence schemaName="defmarket" cacheSize="1" cycle="false" dataType="bigint" incrementBy="10"
+                        maxValue="9223372036854775807"
+                        minValue="1" sequenceName="store_category_seq" startValue="1"/>
+    </changeSet>
+    <changeSet id="1654177055565-23" author="Miladi (generated)">
+        <createSequence schemaName="defmarket" cacheSize="1" cycle="false" dataType="bigint" incrementBy="10"
+                        maxValue="9223372036854775807"
+                        minValue="1" sequenceName="store_seq" startValue="1"/>
+    </changeSet>
+    <changeSet id="1654177055565-24" author="Miladi (generated)">
+        <createSequence schemaName="defmarket" cacheSize="1" cycle="false" dataType="bigint" incrementBy="10"
+                        maxValue="9223372036854775807"
+                        minValue="1" sequenceName="timetable_seq" startValue="1"/>
+    </changeSet>
+    <changeSet id="1654177055565-25" author="Miladi (generated)">
+        <createSequence schemaName="defmarket" cacheSize="1" cycle="false" dataType="bigint" incrementBy="10"
+                        maxValue="9223372036854775807"
+                        minValue="1" sequenceName="user_account_seq" startValue="3"/>
+    </changeSet>
+    <changeSet id="1654177055565-26" author="Miladi (generated)">
+        <createSequence schemaName="defmarket" cacheSize="1" cycle="false" dataType="bigint" incrementBy="10"
+                        maxValue="9223372036854775807"
+                        minValue="1" sequenceName="working_time_seq" startValue="1"/>
+    </changeSet>
+    <changeSet id="1654177055565-27" author="Miladi (generated)">
+        <createTable schemaName="defmarket" tableName="announcement">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="announcement_pkey"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)"/>
+            <column name="created_date" type="timestamp"/>
+            <column name="last_modified_by" type="VARCHAR(255)"/>
+            <column name="last_modified_date" type="timestamp"/>
+            <column name="version" type="BIGINT"/>
+            <column name="is_deleted" type="BOOLEAN"/>
+            <column name="description" type="VARCHAR(999)"/>
+            <column name="title" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="is_visible" type="BOOLEAN"/>
+            <column name="logo_document_id" type="BIGINT"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1654177055565-28" author="Miladi (generated)">
+        <createTable schemaName="defmarket" tableName="announcement_aud">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="announcement_aud_pkey"/>
+            </column>
+            <column name="rev" type="INT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="announcement_aud_pkey"/>
+            </column>
+            <column name="revtype" type="SMALLINT(5)"/>
+            <column name="revend" type="INT"/>
+            <column name="is_deleted" type="BOOLEAN"/>
+            <column name="description" type="VARCHAR(999)"/>
+            <column name="title" type="VARCHAR(255)"/>
+            <column name="is_visible" type="BOOLEAN"/>
+            <column name="logo_document_id" type="BIGINT"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1654177055565-29" author="Miladi (generated)">
+        <createTable schemaName="defmarket" tableName="company">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="company_pkey"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)"/>
+            <column name="created_date" type="timestamp"/>
+            <column name="last_modified_by" type="VARCHAR(255)"/>
+            <column name="last_modified_date" type="timestamp"/>
+            <column name="version" type="BIGINT"/>
+            <column name="city" type="VARCHAR(200)"/>
+            <column name="country" type="VARCHAR(100)"/>
+            <column name="department" type="VARCHAR(100)"/>
+            <column name="street" type="VARCHAR(500)"/>
+            <column name="zip_code" type="VARCHAR(10)"/>
+            <column name="is_blocked" type="BOOLEAN"/>
+            <column name="company_type" type="VARCHAR(25)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="is_deleted" type="BOOLEAN"/>
+            <column name="leader_type" type="VARCHAR(10)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="other_activity" type="CLOB"/>
+            <column name="siren" type="VARCHAR(255)"/>
+            <column name="tva" type="VARCHAR(255)"/>
+            <column name="validated_by_admin" type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
+            <column name="ruler_id" type="BIGINT"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1654177055565-30" author="Miladi (generated)">
+        <createTable schemaName="defmarket" tableName="company_aud">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="company_aud_pkey"/>
+            </column>
+            <column name="rev" type="INT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="company_aud_pkey"/>
+            </column>
+            <column name="revtype" type="SMALLINT(5)"/>
+            <column name="revend" type="INT"/>
+            <column name="city" type="VARCHAR(200)"/>
+            <column name="country" type="VARCHAR(100)"/>
+            <column name="department" type="VARCHAR(100)"/>
+            <column name="street" type="VARCHAR(500)"/>
+            <column name="zip_code" type="VARCHAR(10)"/>
+            <column name="is_blocked" type="BOOLEAN"/>
+            <column name="company_type" type="VARCHAR(25)"/>
+            <column name="is_deleted" type="BOOLEAN"/>
+            <column name="leader_type" type="VARCHAR(10)"/>
+            <column name="name" type="VARCHAR(255)"/>
+            <column name="other_activity" type="CLOB"/>
+            <column name="siren" type="VARCHAR(255)"/>
+            <column name="tva" type="VARCHAR(255)"/>
+            <column name="validated_by_admin" type="BOOLEAN"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1654177055565-31" author="Miladi (generated)">
+        <createTable schemaName="defmarket" tableName="default_role">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="default_role_pkey"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)"/>
+            <column name="created_date" type="timestamp"/>
+            <column name="last_modified_by" type="VARCHAR(255)"/>
+            <column name="last_modified_date" type="timestamp"/>
+            <column name="version" type="BIGINT"/>
+            <column name="description" type="VARCHAR(255)"/>
+            <column name="name" type="VARCHAR(255)"/>
+            <column name="target" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1654177055565-32" author="Miladi (generated)">
+        <createTable schemaName="defmarket" tableName="default_role_aud">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="default_role_aud_pkey"/>
+            </column>
+            <column name="rev" type="INT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="default_role_aud_pkey"/>
+            </column>
+            <column name="revtype" type="SMALLINT(5)"/>
+            <column name="revend" type="INT"/>
+            <column name="description" type="VARCHAR(255)"/>
+            <column name="name" type="VARCHAR(255)"/>
+            <column name="target" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1654177055565-33" author="Miladi (generated)">
+        <createTable schemaName="defmarket" tableName="default_role_permissions">
+            <column name="is_admin" type="BOOLEAN"/>
+            <column name="can_write" type="BOOLEAN"/>
+            <column name="can_delete" type="BOOLEAN"/>
+            <column name="can_read" type="BOOLEAN"/>
+            <column name="can_update" type="BOOLEAN"/>
+            <column name="permission_id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="default_role_permissions_pkey"/>
+            </column>
+            <column name="role_id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="default_role_permissions_pkey"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet id="1654177055565-34" author="Miladi (generated)">
+        <createTable schemaName="defmarket" tableName="default_role_permissions_aud">
+            <column name="permission_id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="default_role_permissions_aud_pkey"/>
+            </column>
+            <column name="role_id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="default_role_permissions_aud_pkey"/>
+            </column>
+            <column name="rev" type="INT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="default_role_permissions_aud_pkey"/>
+            </column>
+            <column name="revtype" type="SMALLINT(5)"/>
+            <column name="revend" type="INT"/>
+            <column name="is_admin" type="BOOLEAN"/>
+            <column name="can_write" type="BOOLEAN"/>
+            <column name="can_delete" type="BOOLEAN"/>
+            <column name="can_read" type="BOOLEAN"/>
+            <column name="can_update" type="BOOLEAN"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1654177055565-35" author="Miladi (generated)">
+        <createTable schemaName="defmarket" tableName="documents_aud">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="documents_aud_pkey"/>
+            </column>
+            <column name="rev" type="INT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="documents_aud_pkey"/>
+            </column>
+            <column name="revtype" type="SMALLINT(5)"/>
+            <column name="revend" type="INT"/>
+            <column name="name" type="VARCHAR(255)"/>
+            <column name="path" type="CLOB"/>
+            <column name="size" type="BIGINT"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1654177055565-36" author="Miladi (generated)">
+        <createTable schemaName="defmarket" tableName="expo_token">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="expo_token_pkey"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)"/>
+            <column name="created_date" type="timestamp"/>
+            <column name="last_modified_by" type="VARCHAR(255)"/>
+            <column name="last_modified_date" type="timestamp"/>
+            <column name="version" type="BIGINT"/>
+            <column name="active" type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
+            <column name="is_deleted" type="BOOLEAN"/>
+            <column name="expo_token" type="VARCHAR(255)"/>
+            <column name="last_check" type="timestamp"/>
+            <column name="user_id" type="BIGINT"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1654177055565-37" author="Miladi (generated)">
+        <createTable schemaName="defmarket" tableName="history_trace">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="history_trace_pkey"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)"/>
+            <column name="created_date" type="timestamp"/>
+            <column name="last_modified_by" type="VARCHAR(255)"/>
+            <column name="last_modified_date" type="timestamp"/>
+            <column name="version" type="BIGINT"/>
+            <column name="is_deleted" type="BOOLEAN"/>
+            <column name="description" type="CLOB"/>
+            <column name="history_type" type="INT"/>
+            <column name="title" type="VARCHAR(255)"/>
+            <column name="user_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet id="1654177055565-38" author="Miladi (generated)">
+        <createTable schemaName="defmarket" tableName="history_trace_aud">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="history_trace_aud_pkey"/>
+            </column>
+            <column name="rev" type="INT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="history_trace_aud_pkey"/>
+            </column>
+            <column name="revtype" type="SMALLINT(5)"/>
+            <column name="revend" type="INT"/>
+            <column name="is_deleted" type="BOOLEAN"/>
+            <column name="description" type="CLOB"/>
+            <column name="history_type" type="INT"/>
+            <column name="title" type="VARCHAR(255)"/>
+            <column name="user_id" type="BIGINT"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1654177055565-39" author="Miladi (generated)">
+        <createTable schemaName="defmarket" tableName="job">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="job_pkey"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)"/>
+            <column name="created_date" type="timestamp"/>
+            <column name="last_modified_by" type="VARCHAR(255)"/>
+            <column name="last_modified_date" type="timestamp"/>
+            <column name="version" type="BIGINT"/>
+            <column name="job_name" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1654177055565-40" author="Miladi (generated)">
+        <createTable schemaName="defmarket" tableName="job_aud">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="job_aud_pkey"/>
+            </column>
+            <column name="rev" type="INT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="job_aud_pkey"/>
+            </column>
+            <column name="revtype" type="SMALLINT(5)"/>
+            <column name="revend" type="INT"/>
+            <column name="job_name" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1654177055565-41" author="Miladi (generated)">
+        <createTable schemaName="defmarket" tableName="job_ref">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="job_ref_pkey"/>
+            </column>
+            <column name="depth" type="BIGINT"/>
+            <column name="job_id" type="BIGINT"/>
+            <column name="job_parent_id" type="BIGINT"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1654177055565-42" author="Miladi (generated)">
+        <createTable schemaName="defmarket" tableName="job_ref_aud">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="job_ref_aud_pkey"/>
+            </column>
+            <column name="rev" type="INT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="job_ref_aud_pkey"/>
+            </column>
+            <column name="revtype" type="SMALLINT(5)"/>
+            <column name="revend" type="INT"/>
+            <column name="depth" type="BIGINT"/>
+            <column name="job_id" type="BIGINT"/>
+            <column name="job_parent_id" type="BIGINT"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1654177055565-43" author="Miladi (generated)">
+        <createTable schemaName="defmarket" tableName="offer">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="offer_pkey"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)"/>
+            <column name="created_date" type="timestamp"/>
+            <column name="last_modified_by" type="VARCHAR(255)"/>
+            <column name="last_modified_date" type="timestamp"/>
+            <column name="version" type="BIGINT"/>
+            <column name="is_blocked" type="BOOLEAN"/>
+            <column name="is_deleted" type="BOOLEAN"/>
+            <column name="description" type="VARCHAR(255)"/>
+            <column name="end_of_offer" type="timestamp"/>
+            <column name="max_offer_value" type="VARCHAR(255)"/>
+            <column name="mid_offer_value" type="VARCHAR(255)"/>
+            <column name="min_offer_value" type="VARCHAR(255)"/>
+            <column name="moderation" type="JSONB"/>
+            <column name="offer_category" type="VARCHAR(10)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="offer_type" type="VARCHAR(10)"/>
+            <column name="start_of_offer" type="timestamp">
+                <constraints nullable="false"/>
+            </column>
+            <column name="theme_type" type="VARCHAR(25)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="title" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="validated_by_admin" type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
+            <column name="value" type="VARCHAR(255)"/>
+            <column name="attached_file_id" type="BIGINT"/>
+            <column name="photo_document_id" type="BIGINT"/>
+            <column name="store_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet id="1654177055565-44" author="Miladi (generated)">
+        <createTable schemaName="defmarket" tableName="offer_aud">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="offer_aud_pkey"/>
+            </column>
+            <column name="rev" type="INT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="offer_aud_pkey"/>
+            </column>
+            <column name="revtype" type="SMALLINT(5)"/>
+            <column name="revend" type="INT"/>
+            <column name="is_blocked" type="BOOLEAN"/>
+            <column name="is_deleted" type="BOOLEAN"/>
+            <column name="description" type="VARCHAR(255)"/>
+            <column name="end_of_offer" type="timestamp"/>
+            <column name="max_offer_value" type="VARCHAR(255)"/>
+            <column name="mid_offer_value" type="VARCHAR(255)"/>
+            <column name="min_offer_value" type="VARCHAR(255)"/>
+            <column name="moderation" type="JSONB"/>
+            <column name="offer_category" type="VARCHAR(10)"/>
+            <column name="offer_type" type="VARCHAR(10)"/>
+            <column name="start_of_offer" type="timestamp"/>
+            <column name="theme_type" type="VARCHAR(25)"/>
+            <column name="title" type="VARCHAR(255)"/>
+            <column name="validated_by_admin" type="BOOLEAN"/>
+            <column name="value" type="VARCHAR(255)"/>
+            <column name="attached_file_id" type="BIGINT"/>
+            <column name="photo_document_id" type="BIGINT"/>
+            <column name="store_id" type="BIGINT"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1654177055565-46" author="Miladi (generated)">
+        <createTable schemaName="defmarket" tableName="permission_aud">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="permission_aud_pkey"/>
+            </column>
+            <column name="rev" type="INT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="permission_aud_pkey"/>
+            </column>
+            <column name="revtype" type="SMALLINT(5)"/>
+            <column name="revend" type="INT"/>
+            <column name="description" type="VARCHAR(255)"/>
+            <column name="name" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1654177055565-47" author="Miladi (generated)">
+        <createTable schemaName="defmarket" tableName="phone">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="phone_pkey"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)"/>
+            <column name="created_date" type="timestamp"/>
+            <column name="last_modified_by" type="VARCHAR(255)"/>
+            <column name="last_modified_date" type="timestamp"/>
+            <column name="version" type="BIGINT"/>
+            <column name="number" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="prefix" type="VARCHAR(5)"/>
+            <column name="primary_user_phone" type="BOOLEAN"/>
+            <column name="store_id" type="BIGINT"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1654177055565-48" author="Miladi (generated)">
+        <createTable schemaName="defmarket" tableName="phone_aud">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="phone_aud_pkey"/>
+            </column>
+            <column name="rev" type="INT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="phone_aud_pkey"/>
+            </column>
+            <column name="revtype" type="SMALLINT(5)"/>
+            <column name="revend" type="INT"/>
+            <column name="number" type="VARCHAR(255)"/>
+            <column name="prefix" type="VARCHAR(5)"/>
+            <column name="primary_user_phone" type="BOOLEAN"/>
+            <column name="store_id" type="BIGINT"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1654177055565-49" author="Miladi (generated)">
+        <createTable schemaName="defmarket" tableName="revinfo">
+            <column name="rev" type="INT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="revinfo_pkey"/>
+            </column>
+            <column name="revtstmp" type="BIGINT"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1654177055565-50" author="Miladi (generated)">
+        <createTable schemaName="defmarket" tableName="ruler">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="ruler_pkey"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)"/>
+            <column name="created_date" type="timestamp"/>
+            <column name="last_modified_by" type="VARCHAR(255)"/>
+            <column name="last_modified_date" type="timestamp"/>
+            <column name="version" type="BIGINT"/>
+            <column name="is_deleted" type="BOOLEAN"/>
+            <column name="last_name" type="VARCHAR(255)"/>
+            <column name="name" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1654177055565-51" author="Miladi (generated)">
+        <createTable schemaName="defmarket" tableName="ruler_aud">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="ruler_aud_pkey"/>
+            </column>
+            <column name="rev" type="INT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="ruler_aud_pkey"/>
+            </column>
+            <column name="revtype" type="SMALLINT(5)"/>
+            <column name="revend" type="INT"/>
+            <column name="is_deleted" type="BOOLEAN"/>
+            <column name="last_name" type="VARCHAR(255)"/>
+            <column name="name" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1654177055565-52" author="Miladi (generated)">
+        <createTable schemaName="defmarket" tableName="social_media">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="social_media_pkey"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)"/>
+            <column name="created_date" type="timestamp"/>
+            <column name="last_modified_by" type="VARCHAR(255)"/>
+            <column name="last_modified_date" type="timestamp"/>
+            <column name="version" type="BIGINT"/>
+            <column name="type" type="VARCHAR(255)"/>
+            <column name="value" type="VARCHAR(500)"/>
+            <column name="store_id" type="BIGINT"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1654177055565-53" author="Miladi (generated)">
+        <createTable schemaName="defmarket" tableName="social_media_aud">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="social_media_aud_pkey"/>
+            </column>
+            <column name="rev" type="INT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="social_media_aud_pkey"/>
+            </column>
+            <column name="revtype" type="SMALLINT(5)"/>
+            <column name="revend" type="INT"/>
+            <column name="type" type="VARCHAR(255)"/>
+            <column name="value" type="VARCHAR(500)"/>
+            <column name="store_id" type="BIGINT"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1654177055565-54" author="Miladi (generated)">
+        <createTable schemaName="defmarket" tableName="store_category">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="store_category_pkey"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)"/>
+            <column name="created_date" type="timestamp"/>
+            <column name="last_modified_by" type="VARCHAR(255)"/>
+            <column name="last_modified_date" type="timestamp"/>
+            <column name="version" type="BIGINT"/>
+            <column name="description" type="VARCHAR(255)"/>
+            <column name="name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="store_type" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet id="1654177055565-55" author="Miladi (generated)">
+        <createTable schemaName="defmarket" tableName="store_payment_method">
+            <column name="storedb_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="condition" type="VARCHAR(1000)"/>
+            <column name="name" type="VARCHAR(5)"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1654177055565-56" author="Miladi (generated)">
+        <createTable schemaName="defmarket" tableName="timetable">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="timetable_pkey"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)"/>
+            <column name="created_date" type="timestamp"/>
+            <column name="last_modified_by" type="VARCHAR(255)"/>
+            <column name="last_modified_date" type="timestamp"/>
+            <column name="version" type="BIGINT"/>
+            <column name="is_active" type="BOOLEAN"/>
+            <column name="day" type="VARCHAR(255)"/>
+            <column name="is_open_24h" type="BOOLEAN"/>
+            <column name="store_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet id="1654177055565-57" author="Miladi (generated)">
+        <createTable schemaName="defmarket" tableName="timetable_aud">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="timetable_aud_pkey"/>
+            </column>
+            <column name="rev" type="INT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="timetable_aud_pkey"/>
+            </column>
+            <column name="revtype" type="SMALLINT(5)"/>
+            <column name="revend" type="INT"/>
+            <column name="is_active" type="BOOLEAN"/>
+            <column name="day" type="VARCHAR(255)"/>
+            <column name="is_open_24h" type="BOOLEAN"/>
+            <column name="store_id" type="BIGINT"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1654177055565-58" author="Miladi (generated)">
+        <createTable schemaName="defmarket" tableName="user_account_aud">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="user_account_aud_pkey"/>
+            </column>
+            <column name="rev" type="INT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="user_account_aud_pkey"/>
+            </column>
+            <column name="revtype" type="SMALLINT(5)"/>
+            <column name="revend" type="INT"/>
+            <column name="activity" type="VARCHAR(10)"/>
+            <column name="city" type="VARCHAR(200)"/>
+            <column name="country" type="VARCHAR(100)"/>
+            <column name="department" type="VARCHAR(100)"/>
+            <column name="street" type="VARCHAR(500)"/>
+            <column name="zip_code" type="VARCHAR(10)"/>
+            <column name="birth_city" type="VARCHAR(255)"/>
+            <column name="birthday" type="VARCHAR(255)"/>
+            <column name="is_blocked" type="BOOLEAN"/>
+            <column name="is_communication" type="BOOLEAN"/>
+            <column name="is_company_completed" type="BOOLEAN"/>
+            <column name="is_identity_validated" type="BOOLEAN"/>
+            <column name="is_offer_completed" type="BOOLEAN"/>
+            <column name="is_profile_completed" type="BOOLEAN"/>
+            <column name="is_store_completed" type="BOOLEAN"/>
+            <column name="is_store_validated" type="BOOLEAN"/>
+            <column name="delete_request_date" type="timestamp"/>
+            <column name="is_deleted" type="BOOLEAN"/>
+            <column name="email" type="VARCHAR(255)"/>
+            <column name="is_expired" type="BOOLEAN"/>
+            <column name="first_name" type="VARCHAR(255)"/>
+            <column name="gender" type="VARCHAR(10)"/>
+            <column name="know_us_through" type="VARCHAR(20)"/>
+            <column name="know_us_through_other_value" type="VARCHAR(255)"/>
+            <column name="last_name" type="VARCHAR(255)"/>
+            <column name="mail_validated" type="BOOLEAN"/>
+            <column name="more_info_requested_by_admin" type="BOOLEAN"/>
+            <column name="new_email" type="VARCHAR(255)"/>
+            <column name="password" type="VARCHAR(255)"/>
+            <column name="push_notification_active" type="BOOLEAN"/>
+            <column name="user_type" type="VARCHAR(10)"/>
+            <column name="validated_by_admin" type="BOOLEAN"/>
+            <column name="validated_info_by_admin" type="BOOLEAN"/>
+            <column name="is_veteran" type="BOOLEAN"/>
+            <column name="avatar_document_id" type="BIGINT"/>
+            <column name="justification_identity_document_id" type="BIGINT"/>
+            <column name="justification_veteran_document_id" type="BIGINT"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1654177055565-59" author="Miladi (generated)">
+        <createTable schemaName="defmarket" tableName="user_account_company">
+            <column name="created_by" type="VARCHAR(255)"/>
+            <column name="created_date" type="timestamp"/>
+            <column name="last_modified_by" type="VARCHAR(255)"/>
+            <column name="last_modified_date" type="timestamp"/>
+            <column name="version" type="BIGINT"/>
+            <column name="company_id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="user_account_company_pkey"/>
+            </column>
+            <column name="user_account_id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="user_account_company_pkey"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet id="1654177055565-60" author="Miladi (generated)">
+        <createTable schemaName="defmarket" tableName="user_account_company_aud">
+            <column name="company_id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="user_account_company_aud_pkey"/>
+            </column>
+            <column name="user_account_id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="user_account_company_aud_pkey"/>
+            </column>
+            <column name="rev" type="INT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="user_account_company_aud_pkey"/>
+            </column>
+            <column name="revtype" type="SMALLINT(5)"/>
+            <column name="revend" type="INT"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1654177055565-61" author="Miladi (generated)">
+        <createTable schemaName="defmarket" tableName="user_notification">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="user_notification_pkey"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)"/>
+            <column name="created_date" type="timestamp"/>
+            <column name="last_modified_by" type="VARCHAR(255)"/>
+            <column name="last_modified_date" type="timestamp"/>
+            <column name="version" type="BIGINT"/>
+            <column name="is_deleted" type="BOOLEAN"/>
+            <column name="icon_type" type="VARCHAR(25)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="text" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="owner_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet id="1654177055565-62" author="Miladi (generated)">
+        <createTable schemaName="defmarket" tableName="user_notification_aud">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="user_notification_aud_pkey"/>
+            </column>
+            <column name="rev" type="INT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="user_notification_aud_pkey"/>
+            </column>
+            <column name="revtype" type="SMALLINT(5)"/>
+            <column name="revend" type="INT"/>
+            <column name="is_deleted" type="BOOLEAN"/>
+            <column name="icon_type" type="VARCHAR(25)"/>
+            <column name="text" type="VARCHAR(255)"/>
+            <column name="owner_id" type="BIGINT"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1654177055565-63" author="Miladi (generated)">
+        <createTable schemaName="defmarket" tableName="user_role">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="user_role_pkey"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)"/>
+            <column name="created_date" type="timestamp"/>
+            <column name="last_modified_by" type="VARCHAR(255)"/>
+            <column name="last_modified_date" type="timestamp"/>
+            <column name="version" type="BIGINT"/>
+            <column name="description" type="VARCHAR(255)"/>
+            <column name="name" type="VARCHAR(255)"/>
+            <column name="user_id" type="BIGINT"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1654177055565-64" author="Miladi (generated)">
+        <createTable schemaName="defmarket" tableName="user_role_aud">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="user_role_aud_pkey"/>
+            </column>
+            <column name="rev" type="INT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="user_role_aud_pkey"/>
+            </column>
+            <column name="revtype" type="SMALLINT(5)"/>
+            <column name="revend" type="INT"/>
+            <column name="description" type="VARCHAR(255)"/>
+            <column name="name" type="VARCHAR(255)"/>
+            <column name="user_id" type="BIGINT"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1654177055565-65" author="Miladi (generated)">
+        <createTable schemaName="defmarket" tableName="user_role_permissions">
+            <column name="created_by" type="VARCHAR(255)"/>
+            <column name="created_date" type="timestamp"/>
+            <column name="last_modified_by" type="VARCHAR(255)"/>
+            <column name="last_modified_date" type="timestamp"/>
+            <column name="version" type="BIGINT"/>
+            <column name="is_admin" type="BOOLEAN"/>
+            <column name="can_write" type="BOOLEAN"/>
+            <column name="can_delete" type="BOOLEAN"/>
+            <column name="can_read" type="BOOLEAN"/>
+            <column name="can_update" type="BOOLEAN"/>
+            <column name="permission_id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="user_role_permissions_pkey"/>
+            </column>
+            <column name="role_id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="user_role_permissions_pkey"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet id="1654177055565-66" author="Miladi (generated)">
+        <createTable schemaName="defmarket" tableName="user_role_permissions_aud">
+            <column name="permission_id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="user_role_permissions_aud_pkey"/>
+            </column>
+            <column name="role_id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="user_role_permissions_aud_pkey"/>
+            </column>
+            <column name="rev" type="INT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="user_role_permissions_aud_pkey"/>
+            </column>
+            <column name="revtype" type="SMALLINT(5)"/>
+            <column name="revend" type="INT"/>
+            <column name="is_admin" type="BOOLEAN"/>
+            <column name="can_write" type="BOOLEAN"/>
+            <column name="can_delete" type="BOOLEAN"/>
+            <column name="can_read" type="BOOLEAN"/>
+            <column name="can_update" type="BOOLEAN"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1654177055565-67" author="Miladi (generated)">
+        <createTable schemaName="defmarket" tableName="working_time">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="working_time_pkey"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)"/>
+            <column name="created_date" type="timestamp"/>
+            <column name="last_modified_by" type="VARCHAR(255)"/>
+            <column name="last_modified_date" type="timestamp"/>
+            <column name="version" type="BIGINT"/>
+            <column name="end_time" type="time"/>
+            <column name="start_time" type="time"/>
+            <column name="timetable_id" type="BIGINT"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1654177055565-68" author="Miladi (generated)">
+        <createTable schemaName="defmarket" tableName="working_time_aud">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="working_time_aud_pkey"/>
+            </column>
+            <column name="rev" type="INT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="working_time_aud_pkey"/>
+            </column>
+            <column name="revtype" type="SMALLINT(5)"/>
+            <column name="revend" type="INT"/>
+            <column name="end_time" type="time"/>
+            <column name="start_time" type="time"/>
+            <column name="timetable_id" type="BIGINT"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1654177055565-69" author="Miladi (generated)">
+        <addForeignKeyConstraint baseTableSchemaName="defmarket" referencedTableSchemaName="defmarket"
+                                 baseColumnNames="attached_file_id" baseTableName="offer"
+                                 constraintName="FK_OFFER_ATTACHED_FILE_ON_DOCUMENTS" onDelete="NO ACTION"
+                                 onUpdate="NO ACTION"
+                                 referencedColumnNames="id" referencedTableName="documents"/>
+    </changeSet>
+    <changeSet id="1654177055565-70" author="Miladi (generated)">
+        <addForeignKeyConstraint baseTableSchemaName="defmarket" referencedTableSchemaName="defmarket"
+                                 baseColumnNames="rev" baseTableName="user_role_aud"
+                                 constraintName="FK_USER_ROLE_AUD_REV_ON_REVINFO" onDelete="NO ACTION"
+                                 onUpdate="NO ACTION"
+                                 referencedColumnNames="rev" referencedTableName="revinfo"/>
+    </changeSet>
+    <changeSet id="1654177055565-71" author="Miladi (generated)">
+        <addForeignKeyConstraint baseTableSchemaName="defmarket" referencedTableSchemaName="defmarket"
+                                 baseColumnNames="rev" baseTableName="timetable_aud"
+                                 constraintName="FK_TIMETABLE_AUD_REV_ON_REVINFO" onDelete="NO ACTION"
+                                 onUpdate="NO ACTION"
+                                 referencedColumnNames="rev" referencedTableName="revinfo"/>
+    </changeSet>
+    <changeSet id="1654177055565-72" author="Miladi (generated)">
+        <addForeignKeyConstraint baseTableSchemaName="defmarket" referencedTableSchemaName="defmarket"
+                                 baseColumnNames="store_id" baseTableName="timetable"
+                                 constraintName="FK_TIMETABLE_ON_STORE" onDelete="NO ACTION" onUpdate="NO ACTION"
+                                 referencedColumnNames="id" referencedTableName="store"/>
+    </changeSet>
+    <changeSet id="1654177055565-73" author="Miladi (generated)">
+        <addForeignKeyConstraint baseTableSchemaName="defmarket" referencedTableSchemaName="defmarket"
+                                 baseColumnNames="justification_identity_document_id" baseTableName="user_account"
+                                 constraintName="FK_USER_ACCOUNT_IDENTITY_ON_DOCUMENTS" onDelete="NO ACTION"
+                                 onUpdate="NO ACTION"
+                                 referencedColumnNames="id" referencedTableName="documents"/>
+    </changeSet>
+    <changeSet id="1654177055565-74" author="Miladi (generated)">
+        <addForeignKeyConstraint baseTableSchemaName="defmarket" referencedTableSchemaName="defmarket"
+                                 baseColumnNames="rev" baseTableName="documents_aud"
+                                 constraintName="FK_DOCUMENTS_AUD_REV_ON_REVINFO" onDelete="NO ACTION"
+                                 onUpdate="NO ACTION"
+                                 referencedColumnNames="rev" referencedTableName="revinfo"/>
+    </changeSet>
+    <changeSet id="1654177055565-75" author="Miladi (generated)">
+        <addForeignKeyConstraint baseTableSchemaName="defmarket" referencedTableSchemaName="defmarket"
+                                 baseColumnNames="rev" baseTableName="job_ref_aud"
+                                 constraintName="FK_JOB_REF_AUD_REV_ON_REVINFO" onDelete="NO ACTION"
+                                 onUpdate="NO ACTION"
+                                 referencedColumnNames="rev" referencedTableName="revinfo"/>
+    </changeSet>
+    <changeSet id="1654177055565-76" author="Miladi (generated)">
+        <addForeignKeyConstraint baseTableSchemaName="defmarket" referencedTableSchemaName="defmarket"
+                                 baseColumnNames="rev" baseTableName="company_aud"
+                                 constraintName="FK_COMPANY_AUD_REV_ON_REVINFO" onDelete="NO ACTION"
+                                 onUpdate="NO ACTION"
+                                 referencedColumnNames="rev" referencedTableName="revinfo"/>
+    </changeSet>
+    <changeSet id="1654177055565-77" author="Miladi (generated)">
+        <addForeignKeyConstraint baseTableSchemaName="defmarket" referencedTableSchemaName="defmarket"
+                                 baseColumnNames="revend" baseTableName="user_account_aud"
+                                 constraintName="FK_USER_ACCOUNT_AUD_REVEND_ON_REVINFO" onDelete="NO ACTION"
+                                 onUpdate="NO ACTION"
+                                 referencedColumnNames="rev" referencedTableName="revinfo"/>
+    </changeSet>
+    <changeSet id="1654177055565-78" author="Miladi (generated)">
+        <addForeignKeyConstraint baseTableSchemaName="defmarket" referencedTableSchemaName="defmarket"
+                                 baseColumnNames="rev" baseTableName="history_trace_aud"
+                                 constraintName="FK_HISTORY_TRACE_AUD_REV_ON_REVINFO" onDelete="NO ACTION"
+                                 onUpdate="NO ACTION"
+                                 referencedColumnNames="rev" referencedTableName="revinfo"/>
+    </changeSet>
+    <changeSet id="1654177055565-79" author="Miladi (generated)">
+        <addForeignKeyConstraint baseTableSchemaName="defmarket" referencedTableSchemaName="defmarket"
+                                 baseColumnNames="photo_document_id" baseTableName="offer"
+                                 constraintName="FK_OFFER_PHOTO_ON_DOCUMENTS" onDelete="NO ACTION"
+                                 onUpdate="NO ACTION"
+                                 referencedColumnNames="id" referencedTableName="documents"/>
+    </changeSet>
+    <changeSet id="1654177055565-80" author="Miladi (generated)">
+        <addForeignKeyConstraint baseTableSchemaName="defmarket" referencedTableSchemaName="defmarket"
+                                 baseColumnNames="user_id" baseTableName="expo_token"
+                                 constraintName="FK_EXPO_TOKEN_ON_USER_ACCOUNT" onDelete="NO ACTION"
+                                 onUpdate="NO ACTION"
+                                 referencedColumnNames="id" referencedTableName="user_account"/>
+    </changeSet>
+    <changeSet id="1654177055565-81" author="Miladi (generated)">
+        <addForeignKeyConstraint baseTableSchemaName="defmarket" referencedTableSchemaName="defmarket"
+                                 baseColumnNames="revend" baseTableName="job_aud"
+                                 constraintName="FK_JOB_AUD_REVEND_ON_REVINFO" onDelete="NO ACTION" onUpdate="NO ACTION"
+                                 referencedColumnNames="rev" referencedTableName="revinfo"/>
+    </changeSet>
+    <changeSet id="1654177055565-82" author="Miladi (generated)">
+        <addForeignKeyConstraint baseTableSchemaName="defmarket" referencedTableSchemaName="defmarket"
+                                 baseColumnNames="store_id" baseTableName="offer"
+                                 constraintName="FK_OFFER_ON_STORE" onDelete="NO ACTION" onUpdate="NO ACTION"
+                                 referencedColumnNames="id" referencedTableName="store"/>
+    </changeSet>
+    <changeSet id="1654177055565-83" author="Miladi (generated)">
+        <addForeignKeyConstraint baseTableSchemaName="defmarket" referencedTableSchemaName="defmarket"
+                                 baseColumnNames="storedb_id" baseTableName="store_payment_method"
+                                 constraintName="FK_STORE_PAYMENT_METHOD_ON_STORE" onDelete="NO ACTION"
+                                 onUpdate="NO ACTION"
+                                 referencedColumnNames="id" referencedTableName="store"/>
+    </changeSet>
+    <changeSet id="1654177055565-84" author="Miladi (generated)">
+        <addForeignKeyConstraint baseTableSchemaName="defmarket" referencedTableSchemaName="defmarket"
+                                 baseColumnNames="rev" baseTableName="user_role_permissions_aud"
+                                 constraintName="FK_USER_ROLE_PERMISSIONS_AUD_REV_ON_REVINFO" onDelete="NO ACTION"
+                                 onUpdate="NO ACTION"
+                                 referencedColumnNames="rev" referencedTableName="revinfo"/>
+    </changeSet>
+    <changeSet id="1654177055565-85" author="Miladi (generated)">
+        <addForeignKeyConstraint baseTableSchemaName="defmarket" referencedTableSchemaName="defmarket"
+                                 baseColumnNames="user_id" baseTableName="user_role"
+                                 constraintName="FK_USER_ROLE_ON_USER_ACCOUNT" onDelete="CASCADE" onUpdate="NO ACTION"
+                                 referencedColumnNames="id" referencedTableName="user_account"/>
+    </changeSet>
+    <changeSet id="1654177055565-86" author="Miladi (generated)">
+        <addForeignKeyConstraint baseTableSchemaName="defmarket" referencedTableSchemaName="defmarket"
+                                 baseColumnNames="revend" baseTableName="store_aud"
+                                 constraintName="FK_STORE_AUD_REVEND_ON_REVINFO" onDelete="NO ACTION"
+                                 onUpdate="NO ACTION"
+                                 referencedColumnNames="rev" referencedTableName="revinfo"/>
+    </changeSet>
+    <changeSet id="1654177055565-87" author="Miladi (generated)">
+        <addForeignKeyConstraint baseTableSchemaName="defmarket" referencedTableSchemaName="defmarket"
+                                 baseColumnNames="cover_document_id" baseTableName="store"
+                                 constraintName="FK_STORE_COVER_ON_DOCUMENTS" onDelete="NO ACTION" onUpdate="NO ACTION"
+                                 referencedColumnNames="id" referencedTableName="documents"/>
+    </changeSet>
+    <changeSet id="1654177055565-88" author="Miladi (generated)">
+        <addForeignKeyConstraint baseTableSchemaName="defmarket" referencedTableSchemaName="defmarket"
+                                 baseColumnNames="revend" baseTableName="user_account_company_aud"
+                                 constraintName="FK_USER_ACCOUNT_COMPANY_AUD_REVEND_ON_REVINFO" onDelete="NO ACTION"
+                                 onUpdate="NO ACTION"
+                                 referencedColumnNames="rev" referencedTableName="revinfo"/>
+    </changeSet>
+    <changeSet id="1654177055565-89" author="Miladi (generated)">
+        <addForeignKeyConstraint baseTableSchemaName="defmarket" referencedTableSchemaName="defmarket"
+                                 baseColumnNames="revend" baseTableName="user_role_permissions_aud"
+                                 constraintName="FK_USER_ROLE_PERMISSIONS_AUD_REVEND_ON_REVINFO" onDelete="NO ACTION"
+                                 onUpdate="NO ACTION"
+                                 referencedColumnNames="rev" referencedTableName="revinfo"/>
+    </changeSet>
+    <changeSet id="1654177055565-90" author="Miladi (generated)">
+        <addForeignKeyConstraint baseTableSchemaName="defmarket" referencedTableSchemaName="defmarket"
+                                 baseColumnNames="rev" baseTableName="permission_aud"
+                                 constraintName="FK_PERMISSION_AUD_REV_ON_REVINFO" onDelete="NO ACTION"
+                                 onUpdate="NO ACTION"
+                                 referencedColumnNames="rev" referencedTableName="revinfo"/>
+    </changeSet>
+    <changeSet id="1654177055565-91" author="Miladi (generated)">
+        <addForeignKeyConstraint baseTableSchemaName="defmarket" referencedTableSchemaName="defmarket"
+                                 baseColumnNames="revend" baseTableName="default_role_aud"
+                                 constraintName="FK_DEFAULT_ROLE_AUD_REVEND_ON_REVINFO" onDelete="NO ACTION"
+                                 onUpdate="NO ACTION"
+                                 referencedColumnNames="rev" referencedTableName="revinfo"/>
+    </changeSet>
+    <changeSet id="1654177055565-92" author="Miladi (generated)">
+        <addForeignKeyConstraint baseTableSchemaName="defmarket" referencedTableSchemaName="defmarket"
+                                 baseColumnNames="owner_id" baseTableName="user_notification"
+                                 constraintName="FK_USER_NOTIFICATION_ON_USER_ACCOUNT" onDelete="NO ACTION"
+                                 onUpdate="NO ACTION"
+                                 referencedColumnNames="id" referencedTableName="user_account"/>
+    </changeSet>
+    <changeSet id="1654177055565-93" author="Miladi (generated)">
+        <addForeignKeyConstraint baseTableSchemaName="defmarket" referencedTableSchemaName="defmarket"
+                                 baseColumnNames="revend" baseTableName="ruler_aud"
+                                 constraintName="FK_RULER_AUD_REVEND_REVEND_ON_REVINFO" onDelete="NO ACTION"
+                                 onUpdate="NO ACTION"
+                                 referencedColumnNames="rev" referencedTableName="revinfo"/>
+    </changeSet>
+    <changeSet id="1654177055565-94" author="Miladi (generated)">
+        <addForeignKeyConstraint baseTableSchemaName="defmarket" referencedTableSchemaName="defmarket"
+                                 baseColumnNames="user_account_id" baseTableName="user_account_company"
+                                 constraintName="FK_USER_ACCOUNT_COMPANY_ON_USER_ACCOUNT" onDelete="NO ACTION"
+                                 onUpdate="NO ACTION"
+                                 referencedColumnNames="id" referencedTableName="user_account"/>
+    </changeSet>
+    <changeSet id="1654177055565-95" author="Miladi (generated)">
+        <addForeignKeyConstraint baseTableSchemaName="defmarket" referencedTableSchemaName="defmarket"
+                                 baseColumnNames="rev" baseTableName="announcement_aud"
+                                 constraintName="FK_ANNOUNCEMENT_AUD_REV_ON_REVINFO" onDelete="NO ACTION"
+                                 onUpdate="NO ACTION"
+                                 referencedColumnNames="rev" referencedTableName="revinfo"/>
+    </changeSet>
+    <changeSet id="1654177055565-96" author="Miladi (generated)">
+        <addForeignKeyConstraint baseTableSchemaName="defmarket" referencedTableSchemaName="defmarket"
+                                 baseColumnNames="rev" baseTableName="ruler_aud"
+                                 constraintName="FK_RULER_AUD_REV_ON_REVINFO" onDelete="NO ACTION" onUpdate="NO ACTION"
+                                 referencedColumnNames="rev" referencedTableName="revinfo"/>
+    </changeSet>
+    <changeSet id="1654177055565-97" author="Miladi (generated)">
+        <addForeignKeyConstraint baseTableSchemaName="defmarket" referencedTableSchemaName="defmarket"
+                                 baseColumnNames="phone_id" baseTableName="user_account"
+                                 constraintName="FK_USER_ACCOUNT_ON_PHONE" onDelete="NO ACTION" onUpdate="NO ACTION"
+                                 referencedColumnNames="id" referencedTableName="phone"/>
+    </changeSet>
+    <changeSet id="1654177055565-98" author="Miladi (generated)">
+        <addForeignKeyConstraint baseTableSchemaName="defmarket" referencedTableSchemaName="defmarket"
+                                 baseColumnNames="revend" baseTableName="company_aud"
+                                 constraintName="FK_COMPANY_AUD_REVEND_ON_REVINFO" onDelete="NO ACTION"
+                                 onUpdate="NO ACTION"
+                                 referencedColumnNames="rev" referencedTableName="revinfo"/>
+    </changeSet>
+    <changeSet id="1654177055565-99" author="Miladi (generated)">
+        <addForeignKeyConstraint baseTableSchemaName="defmarket" referencedTableSchemaName="defmarket"
+                                 baseColumnNames="justification_veteran_document_id" baseTableName="user_account"
+                                 constraintName="FK_USER_ACCOUNT_VETERAN_ON_DOCUMENTS" onDelete="NO ACTION"
+                                 onUpdate="NO ACTION"
+                                 referencedColumnNames="id" referencedTableName="documents"/>
+    </changeSet>
+    <changeSet id="1654177055565-100" author="Miladi (generated)">
+        <addForeignKeyConstraint baseTableSchemaName="defmarket" referencedTableSchemaName="defmarket"
+                                 baseColumnNames="revend" baseTableName="announcement_aud"
+                                 constraintName="FK_ANNOUNCEMENT_AUD_REVEND_ON_REVINFO" onDelete="NO ACTION"
+                                 onUpdate="NO ACTION"
+                                 referencedColumnNames="rev" referencedTableName="revinfo"/>
+    </changeSet>
+    <changeSet id="1654177055565-101" author="Miladi (generated)">
+        <addForeignKeyConstraint baseTableSchemaName="defmarket" referencedTableSchemaName="defmarket"
+                                 baseColumnNames="revend" baseTableName="working_time_aud"
+                                 constraintName="FK_WORKING_TIME_AUD_REVEND_ON_REVINFO" onDelete="NO ACTION"
+                                 onUpdate="NO ACTION"
+                                 referencedColumnNames="rev" referencedTableName="revinfo"/>
+    </changeSet>
+    <changeSet id="1654177055565-102" author="Miladi (generated)">
+        <addForeignKeyConstraint baseTableSchemaName="defmarket" referencedTableSchemaName="defmarket"
+                                 baseColumnNames="permission_id" baseTableName="user_role_permissions"
+                                 constraintName="FK_USER_ROLE_PERMISSIONS_ON_PERMISSION" onDelete="NO ACTION"
+                                 onUpdate="NO ACTION"
+                                 referencedColumnNames="id" referencedTableName="permission"/>
+    </changeSet>
+    <changeSet id="1654177055565-103" author="Miladi (generated)">
+        <addForeignKeyConstraint baseTableSchemaName="defmarket" referencedTableSchemaName="defmarket"
+                                 baseColumnNames="revend" baseTableName="user_notification_aud"
+                                 constraintName="FK_USER_NOTIFICATION_AUD_REVEND_ON_REVINFO" onDelete="NO ACTION"
+                                 onUpdate="NO ACTION"
+                                 referencedColumnNames="rev" referencedTableName="revinfo"/>
+    </changeSet>
+    <changeSet id="1654177055565-104" author="Miladi (generated)">
+        <addForeignKeyConstraint baseTableSchemaName="defmarket" referencedTableSchemaName="defmarket"
+                                 baseColumnNames="rev" baseTableName="offer_aud"
+                                 constraintName="FK_OFFER_AUD_REV_ON_REVINFO" onDelete="NO ACTION" onUpdate="NO ACTION"
+                                 referencedColumnNames="rev" referencedTableName="revinfo"/>
+    </changeSet>
+    <changeSet id="1654177055565-105" author="Miladi (generated)">
+        <addForeignKeyConstraint baseTableSchemaName="defmarket" referencedTableSchemaName="defmarket"
+                                 baseColumnNames="avatar_document_id" baseTableName="user_account"
+                                 constraintName="FK_USER_ACCOUNT_AVATAR_ON_DOCUMENTS" onDelete="NO ACTION"
+                                 onUpdate="NO ACTION"
+                                 referencedColumnNames="id" referencedTableName="documents"/>
+    </changeSet>
+    <changeSet id="1654177055565-106" author="Miladi (generated)">
+        <addForeignKeyConstraint baseTableSchemaName="defmarket" referencedTableSchemaName="defmarket"
+                                 baseColumnNames="revend" baseTableName="job_ref_aud"
+                                 constraintName="FK_JOB_REF_AUD_REVEND_ON_REVINFO" onDelete="NO ACTION"
+                                 onUpdate="NO ACTION"
+                                 referencedColumnNames="rev" referencedTableName="revinfo"/>
+    </changeSet>
+    <changeSet id="1654177055565-107" author="Miladi (generated)">
+        <addForeignKeyConstraint baseTableSchemaName="defmarket" referencedTableSchemaName="defmarket"
+                                 baseColumnNames="revend" baseTableName="offer_aud"
+                                 constraintName="FK_OFFER_AUD_REVEND_ON_REVINFO" onDelete="NO ACTION"
+                                 onUpdate="NO ACTION"
+                                 referencedColumnNames="rev" referencedTableName="revinfo"/>
+    </changeSet>
+    <changeSet id="1654177055565-109" author="Miladi (generated)">
+        <addForeignKeyConstraint baseTableSchemaName="defmarket" referencedTableSchemaName="defmarket"
+                                 baseColumnNames="rev" baseTableName="user_notification_aud"
+                                 constraintName="FK_USER_NOTIFICATION_AUD_REV_ON_REVINFO" onDelete="NO ACTION"
+                                 onUpdate="NO ACTION"
+                                 referencedColumnNames="rev" referencedTableName="revinfo"/>
+    </changeSet>
+    <changeSet id="1654177055565-110" author="Miladi (generated)">
+        <addForeignKeyConstraint baseTableSchemaName="defmarket" referencedTableSchemaName="defmarket"
+                                 baseColumnNames="logo_document_id" baseTableName="store"
+                                 constraintName="FK_STORE_LOGO_ON_DOCUMENTS" onDelete="NO ACTION" onUpdate="NO ACTION"
+                                 referencedColumnNames="id" referencedTableName="documents"/>
+    </changeSet>
+    <changeSet id="1654177055565-112" author="Miladi (generated)">
+        <addForeignKeyConstraint baseTableSchemaName="defmarket" referencedTableSchemaName="defmarket"
+                                 baseColumnNames="job_id" baseTableName="job_ref"
+                                 constraintName="FK_JOB_REF_JOB_ON_JOB" onDelete="NO ACTION" onUpdate="NO ACTION"
+                                 referencedColumnNames="id" referencedTableName="job"/>
+    </changeSet>
+    <changeSet id="1654177055565-113" author="Miladi (generated)">
+        <addForeignKeyConstraint baseTableSchemaName="defmarket" referencedTableSchemaName="defmarket"
+                                 baseColumnNames="rev" baseTableName="user_account_aud"
+                                 constraintName="FK_USER_ACCOUNT_AUD_REV_ON_REVINFO" onDelete="NO ACTION"
+                                 onUpdate="NO ACTION"
+                                 referencedColumnNames="rev" referencedTableName="revinfo"/>
+    </changeSet>
+    <changeSet id="1654177055565-114" author="Miladi (generated)">
+        <addForeignKeyConstraint baseTableSchemaName="defmarket" referencedTableSchemaName="defmarket"
+                                 baseColumnNames="role_id" baseTableName="default_role_permissions"
+                                 constraintName="FK_DEFAULT_ROLE_PERMISSIONS_ON_DEFAULT_ROLE" onDelete="NO ACTION"
+                                 onUpdate="NO ACTION"
+                                 referencedColumnNames="id" referencedTableName="default_role"/>
+    </changeSet>
+    <changeSet id="1654177055565-115" author="Miladi (generated)">
+        <addForeignKeyConstraint baseTableSchemaName="defmarket" referencedTableSchemaName="defmarket"
+                                 baseColumnNames="revend" baseTableName="permission_aud"
+                                 constraintName="FK_PERMISSION_AUD_REVEND_ON_REVINFO" onDelete="NO ACTION"
+                                 onUpdate="NO ACTION"
+                                 referencedColumnNames="rev" referencedTableName="revinfo"/>
+    </changeSet>
+    <changeSet id="1654177055565-116" author="Miladi (generated)">
+        <addForeignKeyConstraint baseTableSchemaName="defmarket" referencedTableSchemaName="defmarket"
+                                 baseColumnNames="revend" baseTableName="social_media_aud"
+                                 constraintName="FK_SOCIAL_MEDIA_AUD_REVEND_ON_REVINFO" onDelete="NO ACTION"
+                                 onUpdate="NO ACTION"
+                                 referencedColumnNames="rev" referencedTableName="revinfo"/>
+    </changeSet>
+    <changeSet id="1654177055565-117" author="Miladi (generated)">
+        <addForeignKeyConstraint baseTableSchemaName="defmarket" referencedTableSchemaName="defmarket"
+                                 baseColumnNames="revend" baseTableName="timetable_aud"
+                                 constraintName="FK_TIMETABLE_AUD_REVEND_ON_REVINFO" onDelete="NO ACTION"
+                                 onUpdate="NO ACTION"
+                                 referencedColumnNames="rev" referencedTableName="revinfo"/>
+    </changeSet>
+    <changeSet id="1654177055565-118" author="Miladi (generated)">
+        <addForeignKeyConstraint baseTableSchemaName="defmarket" referencedTableSchemaName="defmarket"
+                                 baseColumnNames="role_id" baseTableName="user_role_permissions"
+                                 constraintName="FK_USER_ROLE_PERMISSIONS_ON_USER_ROLE" onDelete="CASCADE"
+                                 onUpdate="NO ACTION"
+                                 referencedColumnNames="id" referencedTableName="user_role"/>
+    </changeSet>
+    <changeSet id="1654177055565-119" author="Miladi (generated)">
+        <addForeignKeyConstraint baseTableSchemaName="defmarket" referencedTableSchemaName="defmarket"
+                                 baseColumnNames="rev" baseTableName="default_role_aud"
+                                 constraintName="FK_DEFAULT_ROLE_AUD_REV_ON_REVINFO" onDelete="NO ACTION"
+                                 onUpdate="NO ACTION"
+                                 referencedColumnNames="rev" referencedTableName="revinfo"/>
+    </changeSet>
+    <changeSet id="1654177055565-120" author="Miladi (generated)">
+        <addForeignKeyConstraint baseTableSchemaName="defmarket" referencedTableSchemaName="defmarket"
+                                 baseColumnNames="revend" baseTableName="history_trace_aud"
+                                 constraintName="FK_HISTORY_TRACE_AUD_REVEND_ON_REVINFO" onDelete="NO ACTION"
+                                 onUpdate="NO ACTION"
+                                 referencedColumnNames="rev" referencedTableName="revinfo"/>
+    </changeSet>
+    <changeSet id="1654177055565-121" author="Miladi (generated)">
+        <addForeignKeyConstraint baseTableSchemaName="defmarket" referencedTableSchemaName="defmarket"
+                                 baseColumnNames="rev" baseTableName="phone_aud"
+                                 constraintName="FK_PHONE_AUD_REV_ON_REVINFO" onDelete="NO ACTION" onUpdate="NO ACTION"
+                                 referencedColumnNames="rev" referencedTableName="revinfo"/>
+    </changeSet>
+    <changeSet id="1654177055565-122" author="Miladi (generated)">
+        <addForeignKeyConstraint baseTableSchemaName="defmarket" referencedTableSchemaName="defmarket"
+                                 baseColumnNames="rev" baseTableName="social_media_aud"
+                                 constraintName="FK_SOCIAL_MEDIA_AUD_REV_ON_REVINFO" onDelete="NO ACTION"
+                                 onUpdate="NO ACTION"
+                                 referencedColumnNames="rev" referencedTableName="revinfo"/>
+    </changeSet>
+    <changeSet id="1654177055565-123" author="Miladi (generated)">
+        <addForeignKeyConstraint baseTableSchemaName="defmarket" referencedTableSchemaName="defmarket"
+                                 baseColumnNames="company_id" baseTableName="user_account_company"
+                                 constraintName="FK_USER_ACCOUNT_COMPANY_ON_COMPANY" onDelete="NO ACTION"
+                                 onUpdate="NO ACTION"
+                                 referencedColumnNames="id" referencedTableName="company"/>
+    </changeSet>
+    <changeSet id="1654177055565-124" author="Miladi (generated)">
+        <addForeignKeyConstraint baseTableSchemaName="defmarket" referencedTableSchemaName="defmarket"
+                                 baseColumnNames="revend" baseTableName="default_role_permissions_aud"
+                                 constraintName="FK_DEFAULT_ROLE_PERMISSIONS_AUD_REVEND_ON_REVINFO" onDelete="NO ACTION"
+                                 onUpdate="NO ACTION"
+                                 referencedColumnNames="rev" referencedTableName="revinfo"/>
+    </changeSet>
+    <changeSet id="1654177055565-125" author="Miladi (generated)">
+        <addForeignKeyConstraint baseTableSchemaName="defmarket" referencedTableSchemaName="defmarket"
+                                 baseColumnNames="ruler_id" baseTableName="company"
+                                 constraintName="FK_COMPANY_ON_RULER" onDelete="NO ACTION" onUpdate="NO ACTION"
+                                 referencedColumnNames="id" referencedTableName="ruler"/>
+    </changeSet>
+    <changeSet id="1654177055565-126" author="Miladi (generated)">
+        <addForeignKeyConstraint baseTableSchemaName="defmarket" referencedTableSchemaName="defmarket"
+                                 baseColumnNames="rev" baseTableName="working_time_aud"
+                                 constraintName="FK_WORKING_TIME_AUD_REV_ON_REVINFO" onDelete="NO ACTION"
+                                 onUpdate="NO ACTION"
+                                 referencedColumnNames="rev" referencedTableName="revinfo"/>
+    </changeSet>
+    <changeSet id="1654177055565-127" author="Miladi (generated)">
+        <addForeignKeyConstraint baseTableSchemaName="defmarket" referencedTableSchemaName="defmarket"
+                                 baseColumnNames="timetable_id" baseTableName="working_time"
+                                 constraintName="FK_WORKING_TIME_ON_TIMETABLE" onDelete="NO ACTION" onUpdate="NO ACTION"
+                                 referencedColumnNames="id" referencedTableName="timetable"/>
+    </changeSet>
+    <changeSet id="1654177055565-128" author="Miladi (generated)">
+        <addForeignKeyConstraint baseTableSchemaName="defmarket" referencedTableSchemaName="defmarket"
+                                 baseColumnNames="rev" baseTableName="user_account_company_aud"
+                                 constraintName="FK_USER_ACCOUNT_COMPANY_AUD_REV_ON_REVINFO" onDelete="NO ACTION"
+                                 onUpdate="NO ACTION"
+                                 referencedColumnNames="rev" referencedTableName="revinfo"/>
+    </changeSet>
+    <changeSet id="1654177055565-129" author="Miladi (generated)">
+        <addForeignKeyConstraint baseTableSchemaName="defmarket" referencedTableSchemaName="defmarket"
+                                 baseColumnNames="store_id" baseTableName="social_media"
+                                 constraintName="FK_SOCIAL_MEDIA_ON_STORE" onDelete="NO ACTION" onUpdate="NO ACTION"
+                                 referencedColumnNames="id" referencedTableName="store"/>
+    </changeSet>
+    <changeSet id="1654177055565-130" author="Miladi (generated)">
+        <addForeignKeyConstraint baseTableSchemaName="defmarket" referencedTableSchemaName="defmarket"
+                                 baseColumnNames="revend" baseTableName="documents_aud"
+                                 constraintName="FK_DOCUMENTS_AUD_REVEND_ON_REVINFO" onDelete="NO ACTION"
+                                 onUpdate="NO ACTION"
+                                 referencedColumnNames="rev" referencedTableName="revinfo"/>
+    </changeSet>
+    <changeSet id="1654177055565-131" author="Miladi (generated)">
+        <addForeignKeyConstraint baseTableSchemaName="defmarket" referencedTableSchemaName="defmarket"
+                                 baseColumnNames="store_id" baseTableName="phone"
+                                 constraintName="FK_PHONE_ON_STORE" onDelete="NO ACTION" onUpdate="NO ACTION"
+                                 referencedColumnNames="id" referencedTableName="store"/>
+    </changeSet>
+    <changeSet id="1654177055565-132" author="Miladi (generated)">
+        <addForeignKeyConstraint baseTableSchemaName="defmarket" referencedTableSchemaName="defmarket"
+                                 baseColumnNames="company_id" baseTableName="store"
+                                 constraintName="FK_STORE_ON_COMPANY" onDelete="NO ACTION" onUpdate="NO ACTION"
+                                 referencedColumnNames="id" referencedTableName="company"/>
+    </changeSet>
+    <changeSet id="1654177055565-133" author="Miladi (generated)">
+        <addForeignKeyConstraint baseTableSchemaName="defmarket" referencedTableSchemaName="defmarket"
+                                 baseColumnNames="user_id" baseTableName="history_trace"
+                                 constraintName="FK_HISTORY_TRACE_ON_USER_ACCOUNT" onDelete="NO ACTION"
+                                 onUpdate="NO ACTION"
+                                 referencedColumnNames="id" referencedTableName="user_account"/>
+    </changeSet>
+    <changeSet id="1654177055565-134" author="Miladi (generated)">
+        <addForeignKeyConstraint baseTableSchemaName="defmarket" referencedTableSchemaName="defmarket"
+                                 baseColumnNames="rev" baseTableName="job_aud"
+                                 constraintName="FK_JOB_AUD_REV_ON_REVINFO" onDelete="NO ACTION" onUpdate="NO ACTION"
+                                 referencedColumnNames="rev" referencedTableName="revinfo"/>
+    </changeSet>
+    <changeSet id="1654177055565-135" author="Miladi (generated)">
+        <addForeignKeyConstraint baseTableSchemaName="defmarket" referencedTableSchemaName="defmarket"
+                                 baseColumnNames="logo_document_id" baseTableName="announcement"
+                                 constraintName="FK_ANNOUNCEMENT_ON_DOCUMENTS" onDelete="NO ACTION" onUpdate="NO ACTION"
+                                 referencedColumnNames="id" referencedTableName="documents"/>
+    </changeSet>
+    <changeSet id="1654177055565-136" author="Miladi (generated)">
+        <addForeignKeyConstraint baseTableSchemaName="defmarket" referencedTableSchemaName="defmarket"
+                                 baseColumnNames="permission_id" baseTableName="default_role_permissions"
+                                 constraintName="FK_DEFAULT_ROLE_PERMISSIONS_ON_PERMISSION" onDelete="NO ACTION"
+                                 onUpdate="NO ACTION"
+                                 referencedColumnNames="id" referencedTableName="permission"/>
+    </changeSet>
+    <changeSet id="1654177055565-137" author="Miladi (generated)">
+        <addForeignKeyConstraint baseTableSchemaName="defmarket" referencedTableSchemaName="defmarket"
+                                 baseColumnNames="store_category_id" baseTableName="store"
+                                 constraintName="FK_STORE_ON_STORE_CATEGORY" onDelete="NO ACTION" onUpdate="NO ACTION"
+                                 referencedColumnNames="id" referencedTableName="store_category"/>
+    </changeSet>
+    <changeSet id="1654177055565-138" author="Miladi (generated)">
+        <addForeignKeyConstraint baseTableSchemaName="defmarket" referencedTableSchemaName="defmarket"
+                                 baseColumnNames="job_id" baseTableName="user_account"
+                                 constraintName="FK_USER_ACCOUNT_ON_JOB" onDelete="NO ACTION" onUpdate="NO ACTION"
+                                 referencedColumnNames="id" referencedTableName="job"/>
+    </changeSet>
+    <changeSet id="1654177055565-139" author="Miladi (generated)">
+        <addForeignKeyConstraint baseTableSchemaName="defmarket" referencedTableSchemaName="defmarket"
+                                 baseColumnNames="rev" baseTableName="store_aud"
+                                 constraintName="FK_STORE_AUD_REV_ON_REVINFO" onDelete="NO ACTION" onUpdate="NO ACTION"
+                                 referencedColumnNames="rev" referencedTableName="revinfo"/>
+    </changeSet>
+    <changeSet id="1654177055565-140" author="Miladi (generated)">
+        <addForeignKeyConstraint baseTableSchemaName="defmarket" referencedTableSchemaName="defmarket"
+                                 baseColumnNames="revend" baseTableName="phone_aud"
+                                 constraintName="FK_PHONE_AUD_REVEND_ON_REVINFO" onDelete="NO ACTION"
+                                 onUpdate="NO ACTION"
+                                 referencedColumnNames="rev" referencedTableName="revinfo"/>
+    </changeSet>
+    <changeSet id="1654177055565-141" author="Miladi (generated)">
+        <addForeignKeyConstraint baseTableSchemaName="defmarket" referencedTableSchemaName="defmarket"
+                                 baseColumnNames="rev" baseTableName="default_role_permissions_aud"
+                                 constraintName="FK_DEFAULT_ROLE_PERMISSIONS_AUD_REV_ON_REVINFO" onDelete="NO ACTION"
+                                 onUpdate="NO ACTION"
+                                 referencedColumnNames="rev" referencedTableName="revinfo"/>
+    </changeSet>
+    <changeSet id="1654177055565-142" author="Miladi (generated)">
+        <addForeignKeyConstraint baseTableSchemaName="defmarket" referencedTableSchemaName="defmarket"
+                                 baseColumnNames="job_parent_id" baseTableName="job_ref"
+                                 constraintName="FK_JOB_REF_PARENT_ON_JOB" onDelete="NO ACTION" onUpdate="NO ACTION"
+                                 referencedColumnNames="id" referencedTableName="job"/>
+    </changeSet>
+    <changeSet id="1654177055565-143" author="Miladi (generated)">
+        <addForeignKeyConstraint baseTableSchemaName="defmarket" referencedTableSchemaName="defmarket"
+                                 baseColumnNames="revend" baseTableName="user_role_aud"
+                                 constraintName="FK_USER_ROLE_AUD_REVEND_ON_REVINFO" onDelete="NO ACTION"
+                                 onUpdate="NO ACTION"
+                                 referencedColumnNames="rev" referencedTableName="revinfo"/>
+    </changeSet>
+    <changeSet id="1654180633253-24" author="Miladi (generated)">
+        <createIndex indexName="IX_pk_default_role_permissions" schemaName="defmarket"
+                     tableName="default_role_permissions" unique="true">
+            <column name="role_id"/>
+            <column name="permission_id"/>
+        </createIndex>
+    </changeSet>
+    <changeSet id="1654180633253-25" author="Miladi (generated)">
+        <createIndex indexName="IX_pk_user_role_permissions" schemaName="defmarket" tableName="user_role_permissions"
+                     unique="true">
+            <column name="role_id"/>
+            <column name="permission_id"/>
+        </createIndex>
+    </changeSet>
+</databaseChangeLog>

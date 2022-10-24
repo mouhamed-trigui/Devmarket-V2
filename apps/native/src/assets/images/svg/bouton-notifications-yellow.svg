@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 20 24">
+  <g id="bouton-notifications-yellow" transform="translate(-38.25)">
+    <g id="notifications" transform="translate(38.25)">
+      <path id="Tracé_3778" data-name="Tracé 3778" d="M48.25,24A2.384,2.384,0,0,0,50.6,21.6H45.9A2.384,2.384,0,0,0,48.25,24ZM55.9,16.8V10.2a7.691,7.691,0,0,0-5.882-7.56V1.8a1.765,1.765,0,1,0-3.529,0v.84A7.691,7.691,0,0,0,40.6,10.2v6.6L38.25,19.2v1.2h20V19.2Z" transform="translate(-38.25)" fill="#eaae00"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,406 @@
+{
+  "+MkrkM": {
+    "defaultMessage": "Un e-mail de validation d’inscription{br} vient de vous être envoyé.",
+    "description": "Un e-mail de validation d’inscription{br}\n          vient de vous être envoyé."
+  },
+  "//I0hn": {
+    "defaultMessage": "Je me connecte",
+    "description": "Je me connecte"
+  },
+  "13jc1N": {
+    "defaultMessage": "Heureux de vous revoir !",
+    "description": "Heureux de vous revoir !"
+  },
+  "26MPeH": {
+    "defaultMessage": "Saisissez votre e-mail pour créer un{br} nouveau mot de passe {4br}",
+    "description": "Saisissez votre e-mail pour créer un{br} nouveau mot de passe {4br}"
+  },
+  "3IsZks": {
+    "defaultMessage": "J'ajoute mon magasin",
+    "description": "J'ajoute mon magasin"
+  },
+  "41aKhs": {
+    "defaultMessage": "J’active mon empreinte ID",
+    "description": "J’active mon empreinte ID"
+  },
+  "4IsZks": {
+    "defaultMessage": "Suivant",
+    "description": "Suivant"
+  },
+  "CH0dmQ": {
+    "defaultMessage": "PASSER",
+    "description": "PASSER"
+  },
+  "E/8TNP": {
+    "defaultMessage": "1 majuscule",
+    "description": "1 majuscule"
+  },
+  "HIWp32": {
+    "defaultMessage": "Mot de passe oublié",
+    "description": "Mot de passe oublié"
+  },
+  "IDQ10s": {
+    "defaultMessage": "Oui",
+    "description": "Oui"
+  },
+  "IDQ11s": {
+    "defaultMessage": "Non",
+    "description": "Non"
+  },
+  "IDQ13s": {
+    "defaultMessage": "En activité",
+    "description": "En activité"
+  },
+  "IDQ14s": {
+    "defaultMessage": "Pas en activité",
+    "description": "Pas en activité"
+  },
+  "IDQ15s": {
+    "defaultMessage": "choisir...",
+    "description": "choisir..."
+  },
+  "IDQ19s": {
+    "defaultMessage": "choisir...",
+    "description": "choisir..."
+  },
+  "IDQ1ks": {
+    "defaultMessage": "Prénom",
+    "description": "Prénom"
+  },
+  "IDQ20s": {
+    "defaultMessage": "Partage d'un membre",
+    "description": "Partage d'un membre"
+  },
+  "IDQ24s": {
+    "defaultMessage": "Réseau sociaux",
+    "description": "Réseau sociaux"
+  },
+  "IDQ26s": {
+    "defaultMessage": "Autre",
+    "description": "Autre"
+  },
+  "IDQ27s": {
+    "defaultMessage": "Comment avez-vous connu DEFMARKET ?",
+    "description": "Comment avez-vous connu \n DEFMARKET ?"
+  },
+  "IDQ2ks": {
+    "defaultMessage": "Nom",
+    "description": "Nom"
+  },
+  "IDQ31s": {
+    "defaultMessage": "Par nom",
+    "description": "Par nom"
+  },
+  "IDQ32s": {
+    "defaultMessage": "Par numéro de SIREN",
+    "description": "Par numéro de SIREN"
+  },
+  "IDQ3ks": {
+    "defaultMessage": "Date de naissance",
+    "description": "Date de naissance"
+  },
+  "IDQ40s": {
+    "defaultMessage": "Site Internet",
+    "description": "Site Internet"
+  },
+  "IDQ41s": {
+    "defaultMessage": "Via un partenaire",
+    "description": "Via un partenaire"
+  },
+  "IDQ4ks": {
+    "defaultMessage": "Ville de résidence",
+    "description": "Ville de résidence"
+  },
+  "IDQ5ks": {
+    "defaultMessage": "Numéro de téléphone",
+    "description": "Numéro de téléphone"
+  },
+  "IDQ6ks": {
+    "defaultMessage": "Je suis :",
+    "description": "Je suis :"
+  },
+  "IDQ7ks": {
+    "defaultMessage": "Un homme",
+    "description": "Un homme"
+  },
+  "IDQ8ks": {
+    "defaultMessage": "Une femme",
+    "description": "Une femme"
+  },
+  "IDQ9ks": {
+    "defaultMessage": "Êtres vous un ancien membre des forces opérationnelles où êtes-vous en service actif ?",
+    "description": "Êtres vous un ancien membre des \n forces opérationnelles où êtes-vous \n en service actif ?"
+  },
+  "IDQtks": {
+    "defaultMessage": "Dîtes nous",
+    "description": "Dîtes nous"
+  },
+  "IDw4ks": {
+    "defaultMessage": "Date de naissance",
+    "description": "Date de naissance"
+  },
+  "IMF03s": {
+    "defaultMessage": "Rechercher",
+    "description": "Rechercher"
+  },
+  "IMT01s": {
+    "defaultMessage": "Le dirigeant",
+    "description": "Le dirigeant"
+  },
+  "IMT02s": {
+    "defaultMessage": "Le responsable",
+    "description": "Le responsable"
+  },
+  "IMT03s": {
+    "defaultMessage": "Ville de l'entreprise",
+    "description": "Ville de l'entreprise"
+  },
+  "IMT04s": {
+    "defaultMessage": "Nom de l'entreprise",
+    "description": "Nom de l'entreprise"
+  },
+  "IMT05s": {
+    "defaultMessage": "Adresse de l'entreprise",
+    "description": "Adresse de l'entreprise"
+  },
+  "IMT06s": {
+    "defaultMessage": "Code Postal",
+    "description": "Code Postal"
+  },
+  "IMT07s": {
+    "defaultMessage": "Numéro de SIRET ou SIREN",
+    "description": "Numéro de SIRET ou SIREN"
+  },
+  "IMT08s": {
+    "defaultMessage": "Numéro de TVA (facultatif)",
+    "description": "Numéro de TVA (facultatif)"
+  },
+  "IMT10s": {
+    "defaultMessage": "Prénom du dirigeant",
+    "description": "Prénom du dirigeant"
+  },
+  "IMT11s": {
+    "defaultMessage": "Nom du dirigeant",
+    "description": "Nom du dirigeant"
+  },
+  "IjT09s": {
+    "defaultMessage": "Entreprise individuelle",
+    "description": "Entreprise individuelle"
+  },
+  "IjT10s": {
+    "defaultMessage": "Lorem Ipsum",
+    "description": "Lorem Ipsum"
+  },
+  "IjT11s": {
+    "defaultMessage": "Lorem Ipsum",
+    "description": "Lorem Ipsum"
+  },
+  "IjT12s": {
+    "defaultMessage": "Lorem Ipsum",
+    "description": "Lorem Ipsum"
+  },
+  "IjT13s": {
+    "defaultMessage": "Lorem Ipsum",
+    "description": "Lorem Ipsum"
+  },
+  "IjT14s": {
+    "defaultMessage": "Lorem Ipsum",
+    "description": "Lorem Ipsum"
+  },
+  "IjT15s": {
+    "defaultMessage": "Lorem Ipsum",
+    "description": "Lorem Ipsum"
+  },
+  "IkJ01s": {
+    "defaultMessage": "Autres",
+    "description": "Autres"
+  },
+  "IkT01s": {
+    "defaultMessage": "Structure Physique",
+    "description": "Structure Physique"
+  },
+  "IkT02s": {
+    "defaultMessage": "Nom de la boutique",
+    "description": "Nom de la boutique"
+  },
+  "IkT03s": {
+    "defaultMessage": "Description",
+    "description": "Description"
+  },
+  "JXiLyp": {
+    "defaultMessage": "Votre Accès rapide",
+    "description": "Votre Accès rapide"
+  },
+  "KL4Mt5": {
+    "defaultMessage": "Ces données sont conﬁdentielles,{br} seuls les administrateurs peuvent y {br} accéder pour sécuriser l’accès à {br} votre compte.",
+    "description": "Ces données sont conﬁdentielles,{br}\n                        seuls les administrateurs peuvent y {br}\n                        accéder pour sécuriser l’accès à {br}\n                        votre compte."
+  },
+  "KZfmDU": {
+    "defaultMessage": "Vériﬁez votre boîte mail, vos spams{br} et connectez-vous en cliquant le{br} lien magique !",
+    "description": "Vériﬁez votre boîte mail, vos spams{br}\n                    et connectez-vous en cliquant le{br}\n                    lien magique !"
+  },
+  "MkT03s": {
+    "defaultMessage": "Votre demande",
+    "description": "Votre demande"
+  },
+  "NqxUY1": {
+    "defaultMessage": "Vériﬁez votre boîte mail, vos spams{br} pour conﬁrmer votre nouveau mot{br} de passe !",
+    "description": "Vériﬁez votre boîte mail, vos spams{br}\n                    pour conﬁrmer votre nouveau mot{br}\n                    de passe !"
+  },
+  "ONy84v": {
+    "defaultMessage": "1 caractère spécial",
+    "description": "1 caractère spécial"
+  },
+  "TEsBks": {
+    "defaultMessage": "J'ouvre l'email",
+    "description": "J'ouvre l'email"
+  },
+  "TEsNks": {
+    "defaultMessage": "Je me connecte",
+    "description": "Je me connecte"
+  },
+  "TEsZks": {
+    "defaultMessage": "Envoyer",
+    "description": "Envoyer"
+  },
+  "TIsZks": {
+    "defaultMessage": "J'ajoute mon entreprise",
+    "description": "J'ajoute mon entreprise"
+  },
+  "TvsZks": {
+    "defaultMessage": "J’envoie ma demande",
+    "description": "J’envoie ma demande"
+  },
+  "UCypUU": {
+    "defaultMessage": "SUIVANT",
+    "description": "SUIVANT"
+  },
+  "Vb1Qks": {
+    "defaultMessage": "Votre e-mail est invalide",
+    "description": "Votre e-mail est invalide"
+  },
+  "VbH1ks": {
+    "defaultMessage": "Votre identité",
+    "description": "Votre identité"
+  },
+  "VbQ1ks": {
+    "defaultMessage": "E-mail",
+    "description": "E-mail"
+  },
+  "VbQ2ks": {
+    "defaultMessage": "Confirmation de l'e-mail",
+    "description": "Confirmation de l'e-mail"
+  },
+  "VbQ3ks": {
+    "defaultMessage": "Mot de passe",
+    "description": "Mot de passe"
+  },
+  "VbQ4ks": {
+    "defaultMessage": "Confirmer le mot de passe",
+    "description": "Confirmer le mot de passe"
+  },
+  "VbQ5cs": {
+    "defaultMessage": "L'adresse mail n'est pas identique",
+    "description": "L'adresse mail n'est pas identique"
+  },
+  "VbQ5kP": {
+    "defaultMessage": "Le mot de passe ne répond pas aux exigences minimales.",
+    "description": "Le mot de passe ne répond pas aux exigences \nminimales."
+  },
+  "VbQ5ks": {
+    "defaultMessage": "Le mot de passe n'est pas identique",
+    "description": "Le mot de passe n'est pas identique"
+  },
+  "VbQ6cs": {
+    "defaultMessage": "Retapez votre e-mail ici pour le conﬁrmer.",
+    "description": "Retapez votre e-mail ici pour le conﬁrmer."
+  },
+  "VbQ6ks": {
+    "defaultMessage": "Retaper votre mot de passe ici pour le confirmer",
+    "description": "Retaper votre mot de passe ici pour le confirmer"
+  },
+  "VbQFcs": {
+    "defaultMessage": "Retapez votre mot de passe ici pour le conﬁrmer.",
+    "description": "Retapez votre mot de passe ici pour le conﬁrmer."
+  },
+  "Vdl1ks": {
+    "defaultMessage": "MOT DE PASSE OUBLIÉ",
+    "description": "MOT DE PASSE OUBLIÉ"
+  },
+  "VhQ1ks": {
+    "defaultMessage": "Confirmation",
+    "description": "Confirmation"
+  },
+  "VpH1ks": {
+    "defaultMessage": "MOT DE PASSE OUBLIÉ",
+    "description": "MOT DE PASSE OUBLIÉ"
+  },
+  "Yeg6p6": {
+    "defaultMessage": "J'accepte les CGU,CGV et les mentions légales",
+    "description": "J'accepte les CGU,CGV et les mentions légales"
+  },
+  "Z7G6oI": {
+    "defaultMessage": "COMMENCER",
+    "description": "COMMENCER"
+  },
+  "ZWKFs9": {
+    "defaultMessage": "Dites nous en plus sur votre activité et{br} votre structure, un administrateur vous{br} contactera rapidement pour vous{br} accompagner.",
+    "description": "Dites nous en plus sur votre activité et{br}\n                            votre structure, un administrateur vous{br}\n                            contactera rapidement pour vous{br}\n                            accompagner."
+  },
+  "aMluFH": {
+    "defaultMessage": "Pour faciliter votre connexion et sécuriser {br} votre compte chez nous, utilisez votre {br} empreinte ID.",
+    "description": "Pour faciliter votre connexion et sécuriser {br}\n          votre compte chez nous, utilisez votre {br}\n          empreinte ID."
+  },
+  "bmaBMP": {
+    "defaultMessage": "Ajouter votre logo/photo de la boutique",
+    "description": "Ajouter votre logo/photo de la boutique"
+  },
+  "cW76+7": {
+    "defaultMessage": "8 caractères",
+    "description": "8 caractères"
+  },
+  "cbH1ks": {
+    "defaultMessage": "Votre entreprise",
+    "description": "Votre entreprise"
+  },
+  "kqpx53": {
+    "defaultMessage": "Trouvez votre entreprise grâce à son nom{br} ou Siren automatiquement. Vous pouvez{br} également compléter les informations.",
+    "description": "Trouvez votre entreprise grâce à son nom{br}\n                        ou Siren automatiquement. Vous pouvez{br}\n                        également compléter les informations."
+  },
+  "l6aZOe": {
+    "defaultMessage": "Your device is not compatible with Biometrics",
+    "description": "Your device is not compatible with Biometrics"
+  },
+  "lgok95": {
+    "defaultMessage": "1 chiffre",
+    "description": "1 chiffre"
+  },
+  "mvXLeS": {
+    "defaultMessage": "Je n'ai pas de compte",
+    "description": "Je n'ai pas de compte"
+  },
+  "t7wYGM": {
+    "defaultMessage": "1 minuscule",
+    "description": "1 minuscule"
+  },
+  "vDvX6s": {
+    "defaultMessage": "Exigences minimales",
+    "description": "Exigences minimales"
+  },
+  "w939ue": {
+    "defaultMessage": "Un e-mail de changement de mot{br} de passe vient de vous être envoyé.",
+    "description": "Un e-mail de changement de mot{br}\n                    de passe vient de vous être envoyé."
+  },
+  "xbH1ks": {
+    "defaultMessage": "Votre Activité",
+    "description": "Votre Activité"
+  },
+  "xmB0Av": {
+    "defaultMessage": "J'ai déja un compte!",
+    "description": "J'ai déja un compte!"
+  },
+  "zgbfxb": {
+    "defaultMessage": "Saisissez votre e-mail et votre mot{br} de passe pour vous identiﬁer ou{br} utilisez votre Empreinte ID.",
+    "description": "Saisissez votre e-mail et votre mot{br}\n                    de passe pour vous identiﬁer ou{br}\n                    utilisez votre Empreinte ID."
+  }
+}

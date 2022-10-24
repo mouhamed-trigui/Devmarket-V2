@@ -1,0 +1,24 @@
+{
+  "name": "react-native-crisp-chat-sdk",
+  "version": "0.10.2",
+  "summary": "React-Native bridge for Crisp chat iOS and Android SDK&#39;s",
+  "homepage": "https://github.com/walterholohan/react-native-crisp-chat-sdk#readme",
+  "license": "MIT",
+  "authors": "Walter Holohan <walter.holohan@gmail.com> (https://github.com/walterholohan)",
+  "platforms": {
+    "ios": "10.0"
+  },
+  "source": {
+    "git": "https://github.com/walterholohan/react-native-crisp-chat-sdk.git",
+    "tag": "0.10.2"
+  },
+  "source_files": "ios/**/*.{h,m,mm,swift}",
+  "dependencies": {
+    "React": [
+
+    ],
+    "Crisp": [
+      "1.3.1"
+    ]
+  }
+}

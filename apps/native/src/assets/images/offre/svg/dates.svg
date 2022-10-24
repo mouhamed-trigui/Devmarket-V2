@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+  <g id="dates" transform="translate(5.997 8)">
+    <rect id="Rectangle_275" data-name="Rectangle 275" width="36" height="36" rx="4" transform="translate(-5.997 -8)" fill="#23eca3" opacity="0.08"/>
+    <path id="Tracé_3776" data-name="Tracé 3776" d="M210.452,258.732l.83-.83-1.88-1.05Zm0,0" transform="translate(-198.399 -245.79)" fill="#23eca3"/>
+    <g id="_04" data-name="04" transform="translate(-0.995 -2.994)">
+      <path id="Tracé_133502" data-name="Tracé 133502" d="M10.534,4.409H9V2.8a.743.743,0,0,1,.2-.6A.673.673,0,0,1,9.766,2a.673.673,0,0,1,.57.207.743.743,0,0,1,.2.6ZM19.749,2.8a.769.769,0,1,0-1.536,0V4.409h1.536Z" transform="translate(-1.376)" fill="#23eca3"/>
+      <path id="Tracé_133503" data-name="Tracé 133503" d="M24,7.41v3.213H2V7.41a2.358,2.358,0,0,1,.666-1.729A2.252,2.252,0,0,1,4.356,5H7.5V8.213a.733.733,0,0,0,.2.6.7.7,0,0,0,.583.207.7.7,0,0,0,.583-.207.733.733,0,0,0,.2-.6V5h7.856V8.213a.786.786,0,1,0,1.571,0V5H21.64a2.252,2.252,0,0,1,1.691.681A2.358,2.358,0,0,1,24,7.41Z" transform="translate(0 -0.591)" fill="#23eca3"/>
+      <path id="Tracé_133504" data-name="Tracé 133504" d="M2,14H24V24.444a2.358,2.358,0,0,1-.666,1.729,2.252,2.252,0,0,1-1.691.681H4.356a2.252,2.252,0,0,1-1.691-.681A2.358,2.358,0,0,1,2,24.444Z" transform="translate(0 -2.858)" fill="#23eca3"/>
+    </g>
+  </g>
+</svg>

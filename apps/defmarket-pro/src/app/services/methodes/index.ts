@@ -1,0 +1,87 @@
+import {
+    checkEmail,
+    findBySiren,
+    forgotPassword,
+    signIn,
+    me,
+    signUp,
+    signUpI0,
+    signUpI1,
+    signUpI2,
+    ModHeader,
+} from './auth';
+import {
+    addCompany,
+    deleteCompany,
+    listCompany,
+    updateCompany,
+} from './company';
+
+import {
+    moreInfo,
+    addOffer,
+    deleteOffer,
+    getAllOffersOfStore,
+    getOfferResource,
+    getOffre,
+    updateOfferImage,
+    updateOffre,
+} from './offre';
+
+export {
+    checkEmail,
+    findBySiren,
+    forgotPassword,
+    signIn,
+    me,
+    signUp,
+    signUpI0,
+    signUpI1,
+    signUpI2,
+    addCompany,
+    deleteCompany,
+    listCompany,
+    updateCompany,
+    ModHeader,
+    moreInfo,
+    addOffer,
+    deleteOffer,
+    getAllOffersOfStore as getAlloffersOfStore,
+    getOfferResource,
+    getOffre,
+    updateOfferImage,
+    updateOffre,
+};
+
+export {
+    getAllStoresOfCompany,
+    getStore,
+    updateStore,
+    updateStoreLogo,
+    deleteStore,
+} from './store';
+
+export default {
+    checkEmail,
+    findBySiren,
+    forgotPassword,
+    signIn,
+    me,
+    signUp,
+    signUpI0,
+    signUpI1,
+    signUpI2,
+    addCompany,
+    deleteCompany,
+    listCompany,
+    updateCompany,
+    ModHeader,
+    moreInfo,
+    addOffer,
+    deleteOffer,
+    getAlloffersOfStore: getAllOffersOfStore,
+    getOfferResource,
+    getOffre,
+    updateOfferImage,
+    updateOffre,
+};

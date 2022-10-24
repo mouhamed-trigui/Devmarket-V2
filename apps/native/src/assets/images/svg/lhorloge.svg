@@ -1,0 +1,12 @@
+<svg id="lhorloge" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
+  <g id="Groupe_547" data-name="Groupe 547" transform="translate(10.217 10.217)">
+    <g id="Groupe_546" data-name="Groupe 546">
+      <path id="Tracé_13865" data-name="Tracé 13865" d="M237.706,236.949a.757.757,0,1,0,.757.757A.758.758,0,0,0,237.706,236.949Z" transform="translate(-236.949 -236.949)" fill="#003753"/>
+    </g>
+  </g>
+  <g id="Groupe_549" data-name="Groupe 549">
+    <g id="Groupe_548" data-name="Groupe 548">
+      <path id="Tracé_13866" data-name="Tracé 13866" d="M11,0A11,11,0,1,0,22,11,10.994,10.994,0,0,0,11,0Zm-.026,13.3A2.313,2.313,0,0,1,10,13.087L8.166,14.919a.767.767,0,0,1-1.085-1.085L8.9,12.019a2.325,2.325,0,0,1,1.337-3.251V4.809a.767.767,0,1,1,1.535,0V8.786a2.328,2.328,0,0,1-.793,4.517Z" fill="#003753"/>
+    </g>
+  </g>
+</svg>

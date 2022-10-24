@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="bouton-obtenir-un-itineraire-blanc" transform="translate(0 0.001)">
+    <g id="directions" transform="translate(0 -0.001)">
+      <path id="Tracé_134171" data-name="Tracé 134171" d="M23.64,11.159,12.84.359h0a1.16,1.16,0,0,0-1.68,0L.36,11.159a1.16,1.16,0,0,0,0,1.68l10.8,10.8h0a1.16,1.16,0,0,0,1.68,0l10.8-10.8A1.16,1.16,0,0,0,23.64,11.159ZM14.4,15V12H9.6v3.6H7.2V10.8A1.134,1.134,0,0,1,8.4,9.6h6v-3l4.2,4.2Z" transform="translate(0 0.001)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

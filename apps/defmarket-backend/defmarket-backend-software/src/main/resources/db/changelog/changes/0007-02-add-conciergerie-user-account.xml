@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd">
+
+    <changeSet id="1664385825817-1" author="User">
+
+
+        <createTable schemaName="defmarket" tableName="conciergerie_user_account">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_conciergerieuseraccount"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)"/>
+            <column name="last_modified_by" type="VARCHAR(255)"/>
+            <column name="created_date" type="DATETIME"/>
+            <column name="last_modified_date" type="DATETIME"/>
+            <column name="version" type="BIGINT"/>
+            <column name="conciergerie_user_account_id" type="BIGINT"/>
+            <column name="password" type="VARCHAR(255)"/>
+            <column name="conversation_id" type="VARCHAR(255)"/>
+            <column name="is_deleted" type="BOOLEAN"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1664528284685-1" author="User">
+        <addForeignKeyConstraint baseTableName="user_account" baseColumnNames="conciergerie_user_account_id"
+                                 baseTableSchemaName="defmarket"
+                                 referencedTableName="conciergerie_user_account" referencedColumnNames="id"
+                                 constraintName="FK_USERACCOUNT_ON_CONCIERGERIEUSERACCOUNT"
+                                 referencedTableSchemaName="defmarket"/>
+    </changeSet>
+    <changeSet id="1665072914513-1" author="User">
+        <createSequence sequenceName="conciergerie_user_account_seq" startValue="1" incrementBy="10"
+                        schemaName="defmarket"/>
+    </changeSet>
+    <changeSet id="1665073906075-1" author="User">
+        <createTable schemaName="defmarket" tableName="conciergerie_user_account_aud">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="conciergerie_user_account_aud_pkey"/>
+            </column>
+            <column name="rev" type="INT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="conciergerie_user_account_aud_pkey"/>
+            </column>
+            <column name="revtype" type="SMALLINT(5)"/>
+            <column name="revend" type="INT"/>
+            <column name="conciergerie_user_account_id" type="BIGINT"/>
+            <column name="password" type="VARCHAR(255)"/>
+            <column name="conversation_id" type="VARCHAR(255)"/>
+            <column name="is_deleted" type="BOOLEAN"/>
+        </createTable>
+    </changeSet>
+
+
+</databaseChangeLog>

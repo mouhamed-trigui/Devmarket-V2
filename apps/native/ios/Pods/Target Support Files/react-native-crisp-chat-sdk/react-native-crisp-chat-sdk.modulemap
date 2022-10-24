@@ -1,0 +1,6 @@
+module react_native_crisp_chat_sdk {
+  umbrella header "react-native-crisp-chat-sdk-umbrella.h"
+
+  export *
+  module * { export * }
+}

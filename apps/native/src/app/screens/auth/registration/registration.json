@@ -1,0 +1,14 @@
+[
+  {
+    "title": null,
+    "description": "Inscris toi pour faire découvrir ton\nactivité à une communauté engagée.",
+    "sub_description":"L’inscription en 5 minutes, 100%\ngratuite et sécurisée !",
+    "button": "Je m'inscris"
+  },
+  {
+    "title": "MOT DE PASSE",
+    "description": "Ta sécurité est notre priorité.\nRenseigne un mot de passe :",
+    "sub_description":"",
+    "button": "Je confirme"
+  }
+]

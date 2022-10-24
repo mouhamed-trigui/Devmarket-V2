@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
+
+
+    <changeSet id="1657122418812-1" author="User">
+        <createSequence schemaName="defmarket" sequenceName="admin_history_notification_seq" startValue="1"
+                        incrementBy="10"/>
+    </changeSet>
+
+    <changeSet id="1657120184093-1" author="User">
+        <createTable schemaName="defmarket" tableName="admin_history_notification">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_admin_history_notification"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)"/>
+            <column name="last_modified_by" type="VARCHAR(255)"/>
+            <column name="created_date" type="DATETIME"/>
+            <column name="last_modified_date" type="DATETIME"/>
+            <column name="version" type="BIGINT"/>
+            <column name="icon_type" type="VARCHAR(25)"/>
+            <column name="message" type="VARCHAR(255)"/>
+            <column name="title" type="VARCHAR(255)"/>
+            <column name="is_deleted" type="BOOLEAN"/>
+            <column name="notification_type" type="VARCHAR(255)"/>
+            <column name="store_type" type="VARCHAR(255)"/>
+            <column name="gender" type="VARCHAR(255)"/>
+            <column name="status" type="VARCHAR(255)"/>
+            <column name="totla_trader_number" type="BIGINT"/>
+            <column name="store_category_id" type="BIGINT"/>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="store_category_id" baseTableName="admin_history_notification"
+                                 baseTableSchemaName="defmarket"
+                                 constraintName="FK_ADMIN_HISTORY_NOTIFICATION_ON_STORE_CATEGORY"
+                                 referencedColumnNames="id" referencedTableName="store_category"
+                                 referencedTableSchemaName="defmarket"/>
+        <createTable schemaName="defmarket" tableName="admin_history_notificationdb_address_list">
+            <column name="admin_history_notificationdb_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="street" type="VARCHAR(500)"/>
+            <column name="country" type="VARCHAR(100)"/>
+            <column name="city" type="VARCHAR(200)"/>
+            <column name="zip_code" type="VARCHAR(10)"/>
+            <column name="department" type="VARCHAR(100)"/>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="admin_history_notificationdb_id"
+                                 baseTableName="admin_history_notificationdb_address_list"
+                                 baseTableSchemaName="defmarket"
+                                 constraintName="fk_adminhistorynotificationdbaddr_on_adminhistorynotificationdb"
+                                 referencedColumnNames="id" referencedTableName="admin_history_notification"
+                                 referencedTableSchemaName="defmarket"/>
+    </changeSet>
+    <changeSet id="1657120535173-1" author="User">
+        <addColumn schemaName="defmarket" tableName="user_notification">
+            <column name="title" type="VARCHAR(255)"/>
+        </addColumn>
+    </changeSet>
+    <changeSet id="1657126490383-1" author="User">
+        <addColumn schemaName="defmarket" tableName="user_notification_aud">
+            <column name="title" type="VARCHAR(255)"/>
+        </addColumn>
+    </changeSet>
+
+    <changeSet id="1657125056911-1" author="User">
+        <createTable schemaName="defmarket" tableName="admin_history_notification_aud">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_admin_history_notification_aud"/>
+            </column>
+            <column name="rev" type="INT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_admin_history_notification_aud"/>
+            </column>
+            <column name="revtype" type="SMALLINT(5)"/>
+            <column name="revend" type="INT"/>
+            <column name="icon_type" type="VARCHAR(25)"/>
+            <column name="message" type="VARCHAR(255)"/>
+            <column name="title" type="VARCHAR(255)"/>
+            <column name="is_deleted" type="BOOLEAN"/>
+            <column name="notification_type" type="VARCHAR(255)"/>
+            <column name="store_type" type="VARCHAR(255)"/>
+            <column name="gender" type="VARCHAR(255)"/>
+            <column name="status" type="VARCHAR(255)"/>
+            <column name="totla_trader_number" type="BIGINT"/>
+            <column name="store_category_id" type="BIGINT"/>
+        </createTable>
+        <addForeignKeyConstraint baseTableSchemaName="defmarket" referencedTableSchemaName="defmarket"
+                                 baseColumnNames="rev" baseTableName="admin_history_notification_aud"
+                                 constraintName="FK_ADMIN_HISTORY_NOTIFICATION_AUD_REV_ON_REVINFO" onDelete="NO ACTION"
+                                 onUpdate="NO ACTION"
+                                 referencedColumnNames="rev" referencedTableName="revinfo"/>
+
+        <addForeignKeyConstraint baseTableSchemaName="defmarket" referencedTableSchemaName="defmarket"
+                                 baseColumnNames="revend" baseTableName="admin_history_notification_aud"
+                                 constraintName="FK_ADMIN_HISTORY_NOTIFICATION_AUD_REVEND_ON_REVINFO"
+                                 onDelete="NO ACTION"
+                                 onUpdate="NO ACTION"
+                                 referencedColumnNames="rev" referencedTableName="revinfo"/>
+    </changeSet>
+    <changeSet id="1657132045895-1" author="User">
+        <dropNotNullConstraint schemaName="defmarket" tableName="user_notification" columnName="icon_type"/>
+    </changeSet>
+    <changeSet id="1657623016487-1" author="User">
+        <renameColumn schemaName="defmarket" tableName="user_notification" oldColumnName="text"
+                      newColumnName="message"/>
+        <renameColumn schemaName="defmarket" tableName="user_notification_aud" oldColumnName="text"
+                      newColumnName="message"/>
+    </changeSet>
+
+
+</databaseChangeLog>

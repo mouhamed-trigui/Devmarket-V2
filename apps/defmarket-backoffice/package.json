@@ -1,0 +1,10 @@
+{
+    "name": "defmarket-backoffice",
+    "private": true,
+    "homepage": "/",
+    "version": "0.0.1",
+    "devDependencies": {
+        "@capacitor/cli": "^2.4.5",
+        "@types/react-pdf": "^5.0.9"
+    }
+}

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="428" height="926" viewBox="0 0 428 926">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#003753"/>
+      <stop offset="1" stop-color="#00aac7"/>
+    </linearGradient>
+    <clipPath id="clip-degradé">
+      <rect width="428" height="926"/>
+    </clipPath>
+  </defs>
+  <g id="degradé" clip-path="url(#clip-degradé)">
+    <rect width="428" height="926" fill="#003753"/>
+    <rect id="Rectangle_316" data-name="Rectangle 316" width="428" height="926" fill="url(#linear-gradient)"/>
+    <path id="Rectangle_316_-_Contour" data-name="Rectangle 316 - Contour" d="M1,1V925H427V1H1M0,0H428V926H0Z" fill="#707070"/>
+    <rect id="fond-degrade" width="428" height="926" fill="url(#linear-gradient)"/>
+    <path id="fond-degrade_-_Contour" data-name="fond-degrade - Contour" d="M1,1V925H427V1H1M0,0H428V926H0Z" fill="#707070"/>
+  </g>
+</svg>
