@@ -1,0 +1,9 @@
+{
+    "build": {
+      "type" : "maven",
+      "goal" : "clean install -DskipTests -f apps/defmarket-backend/pom.xml"
+    },
+    "deploy": {
+      "jarName": "apps/defmarket-backend/defmarket-backend-software/target/defmarket-backend-software-0.0.1-SNAPSHOT.jar"
+    }
+  }

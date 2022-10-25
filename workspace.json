@@ -1,0 +1,613 @@
+{
+    "version": 2,
+    "cli": {
+        "defaultCollection": "@nrwl/react"
+    },
+    "generators": {
+        "@nrwl/react": {
+            "application": {
+                "style": "scss",
+                "linter": "eslint",
+                "strict": true,
+                "babel": true
+            },
+            "component": {
+                "style": "scss"
+            },
+            "library": {
+                "style": "scss",
+                "linter": "eslint",
+                "strict": true
+            }
+        }
+    },
+    "projects": {
+        "app-components-atomes-lib": {
+            "root": "libs/app/components/atomes/lib",
+            "sourceRoot": "libs/app/components/atomes/lib/src",
+            "projectType": "library",
+            "targets": {
+                "lint": {
+                    "executor": "@nrwl/linter:eslint",
+                    "outputs": ["{options.outputFile}"],
+                    "options": {
+                        "lintFilePatterns": [
+                            "libs/app/components/atomes/lib/**/*.{ts,tsx,js,jsx}"
+                        ]
+                    }
+                },
+                "test": {
+                    "executor": "@nrwl/jest:jest",
+                    "outputs": ["coverage/libs/app/components/atomes/lib"],
+                    "options": {
+                        "jestConfig": "libs/app/components/atomes/lib/jest.config.js",
+                        "passWithNoTests": true
+                    }
+                }
+            }
+        },
+        "components-header": {
+            "root": "libs/components/header",
+            "sourceRoot": "libs/components/header/src",
+            "projectType": "library",
+            "targets": {
+                "lint": {
+                    "executor": "@nrwl/linter:eslint",
+                    "outputs": ["{options.outputFile}"],
+                    "options": {
+                        "lintFilePatterns": [
+                            "libs/components/header/**/*.{ts,tsx,js,jsx}"
+                        ]
+                    }
+                },
+                "test": {
+                    "executor": "@nrwl/jest:jest",
+                    "outputs": ["coverage/libs/components/header"],
+                    "options": {
+                        "jestConfig": "libs/components/header/jest.config.js",
+                        "passWithNoTests": true
+                    }
+                }
+            }
+        },
+        "defmarket-backend": {
+            "root": "apps/defmarket-backend/defmarket-backend-software",
+            "sourceRoot": "apps/defmarket-backend/defmarket-backend-software/src",
+            "projectType": "application",
+            "targets": {
+                "run": {
+                    "executor": "@nxrocks/nx-spring-boot:run",
+                    "options": {
+                        "root": "apps/defmarket-backend/defmarket-application",
+                        "args": ["-Dspring-boot.run.profiles=local"]
+                    }
+                },
+                "serve": {
+                    "executor": "@nxrocks/nx-spring-boot:serve",
+                    "options": {
+                        "root": "apps/defmarket-backend/defmarket-backend-software",
+                        "args": ["-Dspring-boot.run.profiles=local"]
+                    }
+                },
+                "test": {
+                    "executor": "@nxrocks/nx-spring-boot:test",
+                    "options": {
+                        "root": "apps/defmarket-backend/defmarket-backend-software"
+                    }
+                },
+                "clean": {
+                    "executor": "@nxrocks/nx-spring-boot:clean",
+                    "options": {
+                        "root": "apps/defmarket-backend/defmarket-backend-software"
+                    }
+                },
+                "buildJar": {
+                    "executor": "@nxrocks/nx-spring-boot:buildJar",
+                    "options": {
+                        "root": "apps/defmarket-backend/defmarket-backend-software"
+                    }
+                },
+                "cleanInstall": {
+                    "executor": "@nrwl/workspace:run-commands",
+                    "options": {
+                        "commands": [
+                            "mvn clean install -DskipTests",
+                            "mvn package -DskipTests"
+                        ],
+                        "cwd": "apps/defmarket-backend",
+                        "parallel": false
+                    }
+                },
+                "buildWar": {
+                    "executor": "@nxrocks/nx-spring-boot:buildWar",
+                    "options": {
+                        "root": "apps/defmarket-backend/defmarket-backend-software"
+                    }
+                },
+                "buildImage": {
+                    "executor": "@nxrocks/nx-spring-boot:buildImage",
+                    "options": {
+                        "root": "apps/defmarket-backend/defmarket-backend-software"
+                    }
+                },
+                "buildInfo": {
+                    "executor": "@nxrocks/nx-spring-boot:buildInfo",
+                    "options": {
+                        "root": "apps/defmarket-backend/defmarket-backend-software"
+                    }
+                }
+            }
+        },
+        "defmarket-backoffice": {
+            "root": "apps/defmarket-backoffice",
+            "sourceRoot": "apps/defmarket-backoffice/src",
+            "projectType": "application",
+            "targets": {
+                "build": {
+                    "executor": "@nrwl/web:build",
+                    "outputs": ["{options.outputPath}"],
+                    "options": {
+                        "outputPath": "dist/apps/defmarket-backoffice",
+                        "index": "apps/defmarket-backoffice/src/index.html",
+                        "main": "apps/defmarket-backoffice/src/main.js",
+                        "polyfills": "apps/defmarket-backoffice/src/polyfills.js",
+                        "tsConfig": "apps/defmarket-backoffice/tsconfig.app.json",
+                        "assets": [
+                            "apps/defmarket-backoffice/src/assets",
+                            "apps/defmarket-backoffice/src/manifest.json"
+                        ],
+                        "styles": ["apps/defmarket-backoffice/src/styles.css"],
+                        "scripts": [],
+                        "webpackConfig": "@nrwl/react/plugins/webpack"
+                    },
+                    "configurations": {
+                        "production": {
+                            "fileReplacements": [
+                                {
+                                    "replace": "apps/defmarket-backoffice/src/environments/environment.js",
+                                    "with": "apps/defmarket-backoffice/src/environments/environment.prod.js"
+                                }
+                            ],
+                            "optimization": true,
+                            "outputHashing": "all",
+                            "sourceMap": false,
+                            "extractCss": true,
+                            "namedChunks": false,
+                            "extractLicenses": false,
+                            "vendorChunk": false,
+                            "buildOptimizer": true,
+                            "budgets": [
+                                {
+                                    "type": "initial",
+                                    "maximumWarning": "2mb",
+                                    "maximumError": "5mb"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "serve": {
+                    "executor": "@nrwl/web:dev-server",
+                    "options": {
+                        "buildTarget": "defmarket-backoffice:build",
+                        "hmr": true
+                    },
+                    "configurations": {
+                        "production": {
+                            "buildTarget": "defmarket-backoffice:build:production",
+                            "hmr": false
+                        }
+                    }
+                },
+                "lint": {
+                    "executor": "@nrwl/linter:eslint",
+                    "options": {
+                        "lintFilePatterns": [
+                            "apps/defmarket-backoffice/**/*.{ts,tsx,js,jsx}"
+                        ]
+                    }
+                },
+                "test": {
+                    "executor": "@nrwl/jest:jest",
+                    "outputs": ["coverage/apps/defmarket-backoffice"],
+                    "options": {
+                        "jestConfig": "apps/defmarket-backoffice/jest.config.js",
+                        "passWithNoTests": true
+                    }
+                },
+                "cap": {
+                    "executor": "@nxtend/capacitor:cap",
+                    "options": {
+                        "cmd": "--help"
+                    }
+                },
+                "add": {
+                    "executor": "@nxtend/capacitor:cap",
+                    "options": {
+                        "cmd": "add",
+                        "packageInstall": true
+                    },
+                    "configurations": {
+                        "ios": {
+                            "cmd": "add ios"
+                        },
+                        "android": {
+                            "cmd": "add android"
+                        }
+                    }
+                },
+                "copy": {
+                    "executor": "@nxtend/capacitor:cap",
+                    "options": {
+                        "cmd": "copy",
+                        "packageInstall": false
+                    },
+                    "configurations": {
+                        "ios": {
+                            "cmd": "copy ios"
+                        },
+                        "android": {
+                            "cmd": "copy android"
+                        }
+                    }
+                },
+                "open": {
+                    "executor": "@nxtend/capacitor:cap",
+                    "options": {
+                        "cmd": "open",
+                        "packageInstall": false
+                    },
+                    "configurations": {
+                        "ios": {
+                            "cmd": "open ios"
+                        },
+                        "android": {
+                            "cmd": "open android"
+                        }
+                    }
+                },
+                "sync": {
+                    "executor": "@nxtend/capacitor:cap",
+                    "options": {
+                        "cmd": "sync",
+                        "packageInstall": true
+                    },
+                    "configurations": {
+                        "ios": {
+                            "cmd": "sync ios"
+                        },
+                        "android": {
+                            "cmd": "sync android"
+                        }
+                    }
+                },
+                "update": {
+                    "executor": "@nxtend/capacitor:cap",
+                    "options": {
+                        "cmd": "update",
+                        "packageInstall": true
+                    },
+                    "configurations": {
+                        "ios": {
+                            "cmd": "update ios"
+                        },
+                        "android": {
+                            "cmd": "update android"
+                        }
+                    }
+                },
+                "storybook": {
+                    "executor": "@nrwl/storybook:storybook",
+                    "options": {
+                        "uiFramework": "@storybook/react",
+                        "port": 4400,
+                        "config": {
+                            "configFolder": "apps/defmarket-backoffice/.storybook"
+                        }
+                    },
+                    "configurations": {
+                        "ci": {
+                            "quiet": true
+                        }
+                    }
+                },
+                "build-storybook": {
+                    "executor": "@nrwl/storybook:build",
+                    "outputs": ["{options.outputPath}"],
+                    "options": {
+                        "uiFramework": "@storybook/react",
+                        "outputPath": "dist/storybook/defmarket-backoffice",
+                        "config": {
+                            "configFolder": "apps/defmarket-backoffice/.storybook"
+                        }
+                    },
+                    "configurations": {
+                        "ci": {
+                            "quiet": true
+                        }
+                    }
+                },
+                "translate": {
+                    "executor": "@nrwl/workspace:run-commands",
+                    "options": {
+                        "commands": [
+                            "yarn formatjs extract '{apps/defmarket-backoffice,libs/components/header}/src/**/*.{ts,tsx,js,jsx}' --out-file apps/defmarket-backoffice/src/app/extensions/i18n/extraction/extracted-messages.json",
+                            "yarn formatjs compile apps/defmarket-backoffice/src/app/extensions/i18n/extraction/extracted-messages.json --out-file apps/defmarket-backoffice/src/app/extensions/i18n/distribution/en.json",
+                            "yarn formatjs compile apps/defmarket-backoffice/src/app/extensions/i18n/extraction/extracted-messages.json --out-file apps/defmarket-backoffice/src/app/extensions/i18n/distribution/fr.json --pseudo-locale fr"
+                        ],
+                        "parallel": false
+                    }
+                },
+                "prod_build": {
+                    "executor": "@nrwl/workspace:run-commands",
+                    "options": {
+                        "commands": [
+                            "yarn install",
+                            "yarn nx run defmarket-backoffice:build --prod=true",
+                            "cp -rf apps/defmarket-backoffice/src/.htaccess dist/apps/defmarket-backoffice"
+                        ],
+                        "parallel": false
+                    }
+                }
+            }
+        },
+        "defmarket-backoffice-e2e": {
+            "root": "apps/defmarket-backoffice-e2e",
+            "sourceRoot": "apps/defmarket-backoffice-e2e/src",
+            "projectType": "application",
+            "targets": {
+                "e2e": {
+                    "executor": "@nrwl/cypress:cypress",
+                    "options": {
+                        "cypressConfig": "apps/defmarket-backoffice-e2e/cypress.json",
+                        "tsConfig": "apps/defmarket-backoffice-e2e/tsconfig.e2e.json",
+                        "devServerTarget": "defmarket-backoffice:serve"
+                    },
+                    "configurations": {
+                        "production": {
+                            "devServerTarget": "defmarket-backoffice:serve:production"
+                        }
+                    }
+                },
+                "lint": {
+                    "executor": "@nrwl/linter:eslint",
+                    "options": {
+                        "lintFilePatterns": [
+                            "apps/defmarket-backoffice-e2e/**/*.js"
+                        ]
+                    }
+                }
+            }
+        },
+        "defmarket-customer": {
+            "root": "apps/defmarket-customer",
+            "sourceRoot": "apps/defmarket-customer/src",
+            "projectType": "application",
+            "generators": {},
+            "targets": {
+                "eject": {
+                    "executor": "@nrwl/workspace:run-commands",
+                    "options": {
+                        "commands": ["expo eject"]
+                    }
+                },
+                "start": {
+                    "executor": "@nrwl/workspace:run-commands",
+                    "options": {
+                        "commands": ["expo start"]
+                    }
+                },
+                "run-ios": {
+                    "executor": "@nrwl/workspace:run-commands",
+                    "options": {
+                        "commands": ["expo ios"]
+                    }
+                },
+                "run-android": {
+                    "executor": "@nrwl/workspace:run-commands",
+                    "options": {
+                        "commands": ["expo android"]
+                    }
+                },
+                "run-web": {
+                    "executor": "@nrwl/workspace:run-commands",
+                    "options": {
+                        "commands": ["yarn web"],
+                        "parallel": false
+                    }
+                }
+            }
+        },
+        "defmarket-mobile": {
+            "root": "apps/defmarket-mobile",
+            "sourceRoot": "apps/defmarket-mobile/src",
+            "projectType": "application",
+            "generators": {},
+            "targets": {
+                "bundle": {
+                    "executor": "nx-react-native-expo:bundle",
+                    "options": {}
+                },
+                "start": {
+                    "executor": "nx-react-native-expo:start",
+                    "options": {}
+                },
+                "run-ios": {
+                    "executor": "nx-react-native-expo:run-ios",
+                    "options": {}
+                },
+                "run-android": {
+                    "executor": "nx-react-native-expo:run-android",
+                    "options": {}
+                },
+                "run-web": {
+                    "executor": "nx-react-native-expo:run-web",
+                    "options": {}
+                },
+                "publish": {
+                    "executor": "nx-react-native-expo:publish",
+                    "options": {}
+                },
+                "lint": {
+                    "executor": "@nrwl/linter:eslint",
+                    "options": {
+                        "lintFilePatterns": [
+                            "apps/defmarket-mobile/**/*.{js,ts,tsx}"
+                        ]
+                    }
+                },
+                "test": {
+                    "executor": "@nrwl/jest:jest",
+                    "outputs": ["coverage/apps/defmarket-mobile"],
+                    "options": {
+                        "jestConfig": "apps/defmarket-mobile/jest.config.js",
+                        "passWithNoTests": true
+                    }
+                }
+            }
+        },
+        "defmarket-pro": {
+            "root": "apps/defmarket-pro",
+            "sourceRoot": "apps/defmarket-pro/src",
+            "projectType": "application",
+            "generators": {},
+            "targets": {
+                "bundle": {
+                    "executor": "nx-react-native-expo:bundle",
+                    "options": {}
+                },
+                "start": {
+                    "executor": "nx-react-native-expo:start",
+                    "options": {}
+                },
+                "run-ios": {
+                    "executor": "nx-react-native-expo:run-ios",
+                    "options": {}
+                },
+                "run-android": {
+                    "executor": "nx-react-native-expo:run-android",
+                    "options": {}
+                },
+                "run-web": {
+                    "executor": "nx-react-native-expo:run-web",
+                    "options": {}
+                },
+                "publish": {
+                    "executor": "nx-react-native-expo:publish",
+                    "options": {}
+                },
+                "lint": {
+                    "executor": "@nrwl/linter:eslint",
+                    "options": {
+                        "lintFilePatterns": [
+                            "apps/defmarket-pro/**/*.{js,ts,tsx}"
+                        ]
+                    }
+                },
+                "test": {
+                    "executor": "@nrwl/jest:jest",
+                    "outputs": ["coverage/apps/defmarket-pro"],
+                    "options": {
+                        "jestConfig": "apps/defmarket-pro/jest.config.js",
+                        "passWithNoTests": true
+                    }
+                },
+                "translate": {
+                    "executor": "@nrwl/workspace:run-commands",
+                    "options": {
+                        "commands": [
+                            "yarn formatjs extract '{apps/defmarket-pro,libs/mobile}/src/**/*.{ts,tsx,js,jsx}' --out-file apps/defmarket-pro/src/app/extensions/i18n/extraction/extracted-messages.json",
+                            "yarn formatjs compile apps/defmarket-pro/src/app/extensions/i18n/extraction/extracted-messages.json --out-file apps/defmarket-pro/src/app/extensions/i18n/distribution/en.json",
+                            "yarn formatjs compile apps/defmarket-pro/src/app/extensions/i18n/extraction/extracted-messages.json --out-file apps/defmarket-pro/src/app/extensions/i18n/distribution/fr.json --pseudo-locale fr"
+                        ],
+                        "parallel": false
+                    }
+                }
+            }
+        },
+        "mobile-expo-sdk": {
+            "root": "libs/mobile/expo-sdk",
+            "sourceRoot": "libs/mobile/expo-sdk/src",
+            "projectType": "library",
+            "targets": {
+                "build": {
+                    "executor": "@nrwl/web:package",
+                    "outputs": ["{options.outputPath}"],
+                    "options": {
+                        "outputPath": "node_modules/expo-sdk",
+                        "tsConfig": "libs/mobile/expo-sdk/tsconfig.lib.json",
+                        "project": "libs/mobile/expo-sdk/package.json",
+                        "entryFile": "libs/mobile/expo-sdk/src/index.ts",
+                        "external": ["react/jsx-runtime"],
+                        "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+                        "assets": [
+                            {
+                                "glob": "libs/mobile/expo-sdk/README.md",
+                                "input": ".",
+                                "output": "."
+                            }
+                        ]
+                    }
+                },
+                "lint": {
+                    "executor": "@nrwl/linter:eslint",
+                    "outputs": ["{options.outputFile}"],
+                    "options": {
+                        "lintFilePatterns": [
+                            "libs/mobile/expo-sdk/**/*.{ts,tsx,js,jsx}"
+                        ]
+                    }
+                }
+            }
+        },
+        "mobile-ui-ion-tabs": {
+            "root": "libs/mobile/ui/ion-tabs",
+            "sourceRoot": "libs/mobile/ui/ion-tabs/src",
+            "projectType": "library",
+            "targets": {
+                "lint": {
+                    "executor": "@nrwl/linter:eslint",
+                    "outputs": ["{options.outputFile}"],
+                    "options": {
+                        "lintFilePatterns": [
+                            "libs/mobile/ui/ion-tabs/**/*.{ts,tsx,js,jsx}"
+                        ]
+                    }
+                },
+                "test": {
+                    "executor": "@nrwl/jest:jest",
+                    "outputs": ["coverage/libs/mobile/ui/ion-tabs"],
+                    "options": {
+                        "jestConfig": "libs/mobile/ui/ion-tabs/jest.config.js",
+                        "passWithNoTests": true
+                    }
+                }
+            }
+        },
+        "web-ui-ion-sidebar": {
+            "root": "libs/web/ui/ion-sidebar",
+            "sourceRoot": "libs/web/ui/ion-sidebar/src",
+            "projectType": "library",
+            "targets": {
+                "lint": {
+                    "executor": "@nrwl/linter:eslint",
+                    "outputs": ["{options.outputFile}"],
+                    "options": {
+                        "lintFilePatterns": [
+                            "libs/web/ui/ion-sidebar/**/*.{ts,tsx,js,jsx}"
+                        ]
+                    }
+                },
+                "test": {
+                    "executor": "@nrwl/jest:jest",
+                    "outputs": ["coverage/libs/web/ui/ion-sidebar"],
+                    "options": {
+                        "jestConfig": "libs/web/ui/ion-sidebar/jest.config.js",
+                        "passWithNoTests": true
+                    }
+                }
+            }
+        }
+    },
+    "defaultProject": "defmarket-mobile"
+}

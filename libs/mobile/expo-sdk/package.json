@@ -1,0 +1,8 @@
+{
+    "name": "expo-sdk",
+    "version": "0.0.1",
+    "description": "Expo SDK",
+    "main": "src/index.ts",
+    "author": "MED TAHER BOUCHAHOUA",
+    "license": "MIT"
+}

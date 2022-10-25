@@ -1,0 +1,63 @@
+{
+    "implicitDependencies": {
+        "package.json": {
+            "dependencies": "*",
+            "devDependencies": "*"
+        },
+        ".eslintrc.json": "*"
+    },
+    "affected": {
+        "defaultBase": "master"
+    },
+    "npmScope": "nx-defmarket",
+    "tasksRunnerOptions": {
+        "default": {
+            "runner": "@nrwl/workspace/tasks-runners/default",
+            "options": {
+                "cacheableOperations": [
+                    "build",
+                    "lint",
+                    "test",
+                    "e2e",
+                    "build-storybook"
+                ]
+            }
+        }
+    },
+    "projects": {
+        "app-components-atomes-lib": {
+            "tags": []
+        },
+        "components-header": {
+            "tags": []
+        },
+        "defmarket-backend": {
+            "tags": []
+        },
+        "defmarket-backoffice": {
+            "tags": []
+        },
+        "defmarket-backoffice-e2e": {
+            "tags": [],
+            "implicitDependencies": ["defmarket-backoffice"]
+        },
+        "defmarket-customer": {
+            "tags": []
+        },
+        "defmarket-mobile": {
+            "tags": []
+        },
+        "defmarket-pro": {
+            "tags": []
+        },
+        "mobile-expo-sdk": {
+            "tags": []
+        },
+        "mobile-ui-ion-tabs": {
+            "tags": []
+        },
+        "web-ui-ion-sidebar": {
+            "tags": []
+        }
+    }
+}

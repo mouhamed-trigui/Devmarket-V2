@@ -1,0 +1,37 @@
+{
+    "compileOnSave": false,
+    "compilerOptions": {
+        "rootDir": ".",
+        "sourceMap": true,
+        "declaration": false,
+        "moduleResolution": "node",
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "importHelpers": true,
+        "target": "es2015",
+        "module": "esnext",
+        "lib": ["es2017", "dom"],
+        "skipLibCheck": true,
+        "skipDefaultLibCheck": true,
+        "baseUrl": ".",
+        "paths": {
+            "@nx-defmarket-pro": ["apps/defmarket-pro/App"],
+            "@nx-defmarket/app/components/atomes/lib": [
+                "libs/app/components/atomes/lib/src/index.js"
+            ],
+            "@nx-defmarket/components/header": [
+                "libs/shared/ui/header/src/index.js"
+            ],
+            "@nx-defmarket/mobile/expo-sdk": [
+                "libs/mobile/expo-sdk/src/index.ts"
+            ],
+            "@nx-defmarket/mobile/ui/ion-tabs": [
+                "libs/mobile/ui/ion-tabs/src/index.ts"
+            ],
+            "@nx-defmarket/web/ui/ion-sidebar": [
+                "libs/web/ui/ion-sidebar/src/index.ts"
+            ]
+        }
+    },
+    "exclude": ["node_modules", "tmp"]
+}
